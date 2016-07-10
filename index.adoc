@@ -1,0 +1,11 @@
+= Nico Rikken
+Welcome
+
+== Recent posts
+
+* Example
+
+== Active projects
+
+* Asciidoctor
+* GLM language
