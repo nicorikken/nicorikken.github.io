@@ -16,11 +16,11 @@ Some of my desired features still need to be implemented using Asciidoctor nativ
 
 .Desired features
 - [ ] Generic header bar, if only with the page title, also to easily return to the home page.
-- [ ] Navigation between pages using icons.
-      _An initial ongoing attempt can be found in my link:https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/67[toc-nav PR]_.
+- [x] Navigation between pages using icons.
+      _A decent attempt can be found in my link:https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/67[toc-nav PR]_.
 - [ ] Dedicated format for an article summary.
 - [ ] Automatic Atom feed generation, possibly by using the link:https://en.wikipedia.org/wiki/HAtom[hAtom] microformat in the HTML output.
-- [ ] Replace `mailto:` links with small inline Javascript obfuscation code to prevent scrapers from reading the valid email addresses.
+- [x] Replace `mailto:` links with small inline Javascript obfuscation code to prevent scrapers from reading the valid email addresses. _I've achieved this by link:https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/70[porting a similar Middleman extension]_.
 
 == Asciidoctor plugin for Perun
 link:https://github.com/hashobject/perun[Perun] is a static site generator written in the link:http://clojure.org/[Clojure] programming language.
