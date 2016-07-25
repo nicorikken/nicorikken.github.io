@@ -1,0 +1,5 @@
+*.tmpl.html
+*.adoc
+*.xml
+*.pdf
+_build/

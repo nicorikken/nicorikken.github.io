@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>About</title>
+<title>Power system shapes</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -522,23 +522,93 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>About</h1>
+<h1>Power system shapes</h1>
 </div>
 <div id="content">
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="contact.html#" title="contact"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></div>
+<div id="preamble">
+<div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="projects"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>I’m an electrical engineer about to graduate, but I have a couple of years of part-time working experience already.
-My education is mainly on power systems, but my interest is far wider than the grid and its components.
-Systems, interfaces and processes get me excited, all the way from the hardware to software applications and the human effort.
-I have satisfied my interest for a great deal by observing the communities around free software and free hardware since both provide great resources on both practical and theoretical aspects of technology.
-Currently my part-time job is in the field of energy management systems, where I’m involved in an effort to provide a common interface to the various energy management systems available in order to speed up application development.
-My part-time graduation concerns fault location in low voltage systems, based on measurements in infrastructure, thus potentially providing fault information even before the engineer is on site.</p>
+<p>During my grduation project I became aware of the lack of open source power system symbols.
+The symbols themselves are pretty well standardized, and are used in many different technical materials.
+Yet you cannot simply go to a site like <a href="http://openclipart.org/">OpenClipart.Org</a> and obtain any particular power system shape you&#8217;d like to use.</p>
 </div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="contact.html#" title="contact"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></div>
+<div class="paragraph">
+<p>To bring change that status quo I started <a href="https://github.com/nicorikken/power-system-shapes">an initial attempt</a> to create a universal set of power system shapes.
+In its current state only some shapes have been made, for the <a href="http://dia-installer.de/">Dia</a> editor as a target.</p>
+</div>
+<div class="paragraph">
+<p><strong>This project halted because all shapes were coded by hand, hindering re-use between shapes, and hindering a multi-target approach</strong></p>
+</div>
+<div class="paragraph">
+<p>The ultimate goal is to support multiple target platforms, to cover most use-cases:</p>
+</div>
+<div class="ulist">
+<div class="title">Targets</div>
+<ul>
+<li>
+<p>Dia (via sheets)</p>
+</li>
+<li>
+<p>LibreOffice Draw (via a plugin)</p>
+</li>
+<li>
+<p>LibreCAD</p>
+</li>
+<li>
+<p>QCad</p>
+</li>
+<li>
+<p>Inkscape (more general)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Also each shape could have a number of varieties associated with it, depending on the orientation, the region of use, and the level of detail it describes.</p>
+</div>
+<div class="paragraph">
+<p>It seems that all these use-cases could be covered by using a subset of the SVG standard, as the Dia shape syntax is rooted in the SVG syntax.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_revival"><a class="link" href="#_revival">Revival</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If this project were to be revived, which I hope it will be, I&#8217;d propose to use a different strategy for dealing with the shapes.
+By breaking up the shapes into its underlying components, and by writing generators for multiple output formats, the required human effort can be reduced, whilst at the same time the output can be increased.</p>
+</div>
+<div class="paragraph">
+<div class="title">Shape components</div>
+<p>Shape components should describe the parts a shape is made of.
+It would equate to writing paths and object similar to SVG, although the information could be coded in a meta-format.
+Ideally shape components should be able to use other shape components in their definitions to create a level of inheritance.
+In addition basic translations like offset, rotation, and scaling should be supported to make the most of this inheritance.
+Also the ordering of other shape components is needed.
+<em>Maybe the SVG native format would support this from the get go, but than it can be questioned if this best suits a multi-target approach.</em></p>
+</div>
+<div class="paragraph">
+<div class="title">Shapes</div>
+<p>Shapes would consist of a multitude of <a href="#Shape components">[Shape components]</a>, ordered but not necessarily nested, as the nesting is already available for the shape-components.
+In addition to the shape drawing, it would contain information about the naming and the supported output formats.</p>
+</div>
+<div class="paragraph">
+<div class="title">Sheets</div>
+<p>Sheets would contain multiple shapes, and concern the distrubution of theses shapes.
+For example there might be sheets containing all available shapes, but also there could be sheets containing just shapes for a particular view level (transmission level, distribution level, individual phases).</p>
+</div>
+<div class="paragraph">
+<div class="title">Implementation</div>
+<p>Currently my best bet on the implementation would be to use some XML manipulation library.
+Recently I&#8217;ve acquired some knowledge in Clojure, which might be a suitable target for this project as well.</p>
+</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="projects"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-24 21:51:09 CEST
+Last updated 2016-07-25 07:12:28 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>

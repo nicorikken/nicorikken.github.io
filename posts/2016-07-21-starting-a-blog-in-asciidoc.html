@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>About</title>
+<meta name="author" content="Nico Rikken">
+<title>Starting a blog in asciidoc</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -522,23 +523,47 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>About</h1>
+<h1>Starting a blog in asciidoc</h1>
+<div class="details">
+<span id="author" class="author">Nico Rikken</span><br>
+<span id="revdate">2016-07-21</span>
+</div>
 </div>
 <div id="content">
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="contact.html#" title="contact"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2015-05-05-gajim-and-gpg-agent.html#" title="Gajim and GPG Agent"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>I’m an electrical engineer about to graduate, but I have a couple of years of part-time working experience already.
-My education is mainly on power systems, but my interest is far wider than the grid and its components.
-Systems, interfaces and processes get me excited, all the way from the hardware to software applications and the human effort.
-I have satisfied my interest for a great deal by observing the communities around free software and free hardware since both provide great resources on both practical and theoretical aspects of technology.
-Currently my part-time job is in the field of energy management systems, where I’m involved in an effort to provide a common interface to the various energy management systems available in order to speed up application development.
-My part-time graduation concerns fault location in low voltage systems, based on measurements in infrastructure, thus potentially providing fault information even before the engineer is on site.</p>
+<p>This year I revamped my personal blog.
+Part of the reason is <a href="../projects/asciidoctor.html">my involvement</a> in the Asciidoctor project, which drove me to test the limits on this great markup format.</p>
 </div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="contact.html#" title="contact"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></div>
+<div class="paragraph">
+<p>Writing a blog or a static site in asciidoc is no longer an innovative occupation, as this has been done for many years now.
+In particular the Jekyll static site generator has great support for asciidoc, based on Asciidoctor.
+Less feature-rich is the Awestruct framework, which is most notably used for generating the Asciidoctor.org website.</p>
+</div>
+<div class="paragraph">
+<p>In do however believe that both these great Asciidoctor oriented static site generators fail to subscribe to the great toolset that is Asciidoctor.
+In particular the Asciidoctor diagram and Asciidoctor Extensions projects provide great features for enriching the plain but well-defined base of Asciidoc(tor).</p>
+</div>
+<div class="paragraph">
+<p>Taking the LaTeX ecosystem as a parallel universe, there is a large difference in the number of integrations available.
+Although the syntax of Asciidoctor and the Ruby code-base are easier to read and understand compared to TeX based packages, still the number of tools available for LaTeX is vast.
+A notable benefit of the ecosystem is the way in which all the packages seem to tie into the generic LaTeX rendering layer, resulting in an ecosystem where all packages can be mixed and matched, regardless of the output format.
+This is unfortunately not so much the case for Asciidoctor, which has several content add-ins and several redering back-ends, but no complete support for all possible combinations.</p>
+</div>
+<div class="paragraph">
+<p>In order to bring such compatibility, a larger development effort is needed.
+And I consider this blog revamp my personal motivator in this regard.
+By refusing to rely on static site generation tools other than a Makefile for easy 'making', all the magic has to come from Asciidoctor itself.
+I assume this will result in me having to stretch the possibilities of Asciidoctor to the max, and write a number of extensions underway, but that will be for the better.</p>
+</div>
+<div class="paragraph">
+<p>So expect this blog to be changing more frequently in the coming period, if only for the underlying Asciidoctor tooling.</p>
+</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2015-05-05-gajim-and-gpg-agent.html#" title="Gajim and GPG Agent"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-24 21:51:09 CEST
+Last updated 2016-07-24 22:07:59 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>
