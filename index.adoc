@@ -1,0 +1,23 @@
+= Nico Rikken
+
+Welcome on the new version of my home-page.
+I'm reworking it to be based on native Asciidoctor, one of the projects I contribute to.
+More on this is describe in <<posts/2016-07-21-starting-a-blog-in-asciidoc.adoc#,my dedicated post>>.
+
+== Pages
+* <<pages/about.adoc#,About>>
+* <<pages/contact.adoc#,Contact>>
+* <<pages/experience.adoc#,Experience>>
+* <<pages/skills.adoc#,Skills>>
+
+== Recent posts
+* <<posts/2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>> - 2016-07-21
+* <<posts/2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>> - 2015-05-05
+
+_more posts in the <<posts/index.adoc#,posts index ->>>_
+
+== Active projects
+* <<projects/asciidoctor.adoc#,Asciidoctor>>
+* <<projects/atom-glm-language-support#,Atom GridLAB-D language support>>
+
+_other projects in the <<projects/index.adoc#,projects index ->>>_

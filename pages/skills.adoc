@@ -1,0 +1,56 @@
+= Skills
+:toc: left
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-prev: <<experience.adoc#,experience>>
+
+nav::[]
+
+== Technical expertise
+My main technical expertise is on power systems and related IT-solutions.
+I have detailed knowledge on the structure and the components in the Dutch power grid, as well as the way it is implemented and maintained in practice.
+In my working environment I’ve become acquainted with current market developments and a variety of smart grid solutions.
+I see many opportunities in improving the infrastructure of the electrical grid, including the way information is obtained and handled and how processes are driven.
+
+.My technical knowledge concerns:
+* Electrical power system structure in theory and practice, including topics like micro grids and power quality
+* Advanced metering infrastructure and related products, standards and laws
+* Component knowledge on fuses, power cables, power circuit breakers, electrical machines, and power electronics
+* Home automation methods, initiatives and standards
+* Various open source projects, associations and methods
+* Web technologies regarding cloud services and the internet of things
+* Practical methods for adopting privacy and security
+
+== Languages
+* *Dutch* – Native
+* *English* – Professional working proficiency
+* *German* – Limited working proficiency
+* *French* – Elementary proficiency
+
+== Programming
+I have experience in using programming for simulations, prototyping and product development all the way from firmware to web development, resulting in a broad programing experience.
+In addition I have experience in reading and interpreting code as a replacement for lacking documentation.
+My programming skills span a multitude of languages: C, C++, Python, PHP, Matlab (Octave), Scilab, SQL, HTML, CSS.
+
+== Project management and business development
+In my working experience I’ve become acquainted to project management methods and processes, regarding both the more traditional waterfall method as well as the more dynamic Agile methods including Scrum and Kanban.
+Although my formal project management education is limited to university, I’ve expanded on it in practice.
+My practical project management experience concerns app development, development of electronics and testing.
+
+As for business development I’ve learned about business considerations and development methods during my Technology Entrepreneurship certificate program and later at MPARE I was instructed on lean-startup method.
+I’ve gained practical start-up experience at MPARE, right from the beginning.
+
+== Product specification and testing
+Although unrelated in practice both specification and testing require a similar skill set regarding strictness and completeness.
+In particular I have experience in writing specifications and tests according to a framework in order avoid missing out on crucial points.
+
+== Communication and marketing
+My experience regarding communication and marketing has accumulated over the years, spanning from editing photos, texts, videos, magazines and websites to acquiring sponsorships, marketing events and marketing at conferences.
+A large part of my practical experience is coming from redacting the faculty magazine and from being the secretary at the student climbing association.
+In addition I was actively involved in developing the design and content for the website of MPARE.
+
+== Product training
+Related is my experience in setting up an educational program for (product) training, regarding both the instruction material as well constructing the program and teaching.
+This skill has grown both as a secretary at the student climbing association teaching new students climbing techniques as well as at MPARE teaching engineers how to use the product.
+
+nav::[]

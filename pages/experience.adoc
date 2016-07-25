@@ -1,0 +1,66 @@
+= Experience
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-prev: <<contact.adoc#,contact>>
+:nav-next: <<skills.adoc#,skills>>
+:toc: left
+
+nav::[]
+
+== Work
+
+=== MPARE (2012-now)
+My work at MPARE started out as an internship position, originated from my internship at Liandon.
+During this project I’ve contributed technically to the new internal Alliander start-up MPARE.
+This regards both the development of the high-level concept and the low-level specifications of a new type of consumer-oriented smart-grid communication infrastructure.
+Over time became a part-time occupation, covering a broad spectrum of hardware evaluation, firmware development, application development and providing instruction material.
+
+=== Liandon (2012)
+This regards my internship position at Liandon, which mainly consists of my contribution to the new Alliander internal start-up MPARE My secondary project was the development of a set of recommendations for the continuation of the Bronsbergen microgrid pilot project environment.
+My internship formally moved to MPARE as of the start of 2013.
+
+=== Magic-Events (2002-2012)
+Part-time in-house technician and incidental VJ or DJ for Magic-Events.
+This includes planning, site management, customer contact and above all live performance using both hardware and software solutions.
+
+=== Earlier working experience (2002-2007)
+During this period I had three jobs. At Kwekerij Roelofs 2002-2005 I was a picker picking cucumbers and later tomatoes.
+At Snel BV 2005-2007 I was a part-time machine operator on machines involved in window patching, folding, gluing and packaging paper and plastic packings.
+At Super de Boer 2005-2007 I was a store clerk responsible for filling the racks with goods, while restructuring the internal logistics on the side.
+
+== Organizations
+
+=== FSFE (2014-now)
+Related to my affinity with and my concerns about free software I became a Fellow of the Free Software Foundation Europe.
+As a Fellow I’ve taken part in events and discussions and have contributed as part of both the translation team and the educational team.
+
+=== ESAC (2010-2014)
+At the Eindhoven Student Alpine Club I have been in multiple committees and I was also the secretary of the 35th board.
+In these years amongst other things I have organized multiple events and trainings including commercial abseiling activities, and have been responsible for communication via the website, newsletter and magazine.
+
+=== Waldur (2010-2013)
+Waldur is the power systems part of the electrical engineering student association Thor and as an active member I’ve helped organize events including some excursions.
+
+=== Thor (2007-2011)
+Thor is the electrical engineering student association and as a member I’ve organized some fun events, as well as filled a redaction position at the electrical engineering magazine in cooperation with the faculty.
+
+=== Setash
+In this volleyball association I took part in a special program organizing and executing additional training activities and organizing a camp to conclude the program.
+Education
+
+=== Technical University of Eindhoven (2007-now)
+Propedeuse obtained in the first-half of the second year.
+Master is be in the direction of Electrical Energy Systems, with an internship in the field of smart-grid technologies.
+My graduation at Liandon concerns fault location in low voltage systems, based on measurements in infrastructure, thus potentially providing fault information even before the engineer is on site.
+
+During my study I took part in the Honors program and took a minor in automotive technology.
+I also took part in the certificate program for Technology Entrepreneurship, which covered a business plan development course, together with 3 entrepreneurial courses and several skill trainings.
+In this course I’ve developed a complete business plan around an internet based energy service.
+It helped me to look beyond technology.
+
+=== Olympus College Arnhem (2001-2007)
+VWO, Nature & Science specialization with a Computer Science course.
+
+At the end of my education I was part of the Stunt Committee, in which I was part in organizing all student activities related to the graduation period, including: negotiating with school, contact with external companies and planning an event for over 200 people.
+
+nav::[]

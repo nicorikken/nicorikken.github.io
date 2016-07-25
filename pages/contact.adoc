@@ -1,0 +1,34 @@
+= Contact
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-prev: <<about.adoc#,about>>
+:nav-next: <<experience.adoc#,experience>>
+
+nav::[]
+
+.Social Media
+* link:https://loadaverage.org/nicorikken[GNU Social]
+* link:https://twitter.com/NicoRikken[Twitter] _inactive_
+* link:http://nl.linkedin.com/pub/nico-rikken/18/174/565/[LinkedIn]
+
+.Chat
+* link:xmpp:nicorikken@jabberpl.org[XMPP] (OTR, PGP, OMEMO)
+* link:https://telegram.me/nicorikken[Telegram]
+* link:mailto:nico@nicorikken.eu[Email] (GPG)
+
+.Code repositories
+* link:https://github.com/nicorikken[GitHub]
+* link:https://gitlab.com/u/nicorikken[GitLab.com]
+* link:https://sourceforge.net/u/nicorikken/profile/[SourceForge]
+
+.Other contributions
+* link:https://en.wikipedia.org/wiki/User:Nico.rikken[Wikipedia]
+* link:https://www.openstreetmap.org/user/nicorikken[OpenStreetMap] and its link:http://forum.openstreetmap.org/profile.php?id=64289[Forum]
+
+.Real-life
+* link:https://linuxnijmegen.nl/[Linux User Group]
+
+.Encryption
+* link:http://subkeys.pgp.net:11371/pks/lookup?op=vindex&amp;search=0x1A3C51D11C81AB6[DSA 2048 key] `ECE2 5C50 6550 3E34 453F  767B 1A3C 51D1 1C81 AB68`
+
+nav::[]

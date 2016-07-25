@@ -1,0 +1,13 @@
+= Posts
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-next: <<../projects/index.adoc#,projects>>
+:nav-down: <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>>
+
+nav::[]
+
+.2016
+* <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>> - 2016-07-21
+
+.2015
+* <<2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>> - 2015-05-05

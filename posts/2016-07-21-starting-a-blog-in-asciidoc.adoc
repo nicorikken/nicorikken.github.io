@@ -1,0 +1,33 @@
+= Starting a blog in asciidoc
+:author: Nico Rikken
+:revdate: 2016-07-21
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up: <<index.adoc#,posts>>
+:nav-prev: <<2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>>
+
+nav::[]
+
+This year I revamped my personal blog.
+Part of the reason is <<../projects/asciidoctor.adoc#,my involvement>> in the Asciidoctor project, which drove me to test the limits on this great markup format.
+
+Writing a blog or a static site in asciidoc is no longer an innovative occupation, as this has been done for many years now.
+In particular the Jekyll static site generator has great support for asciidoc, based on Asciidoctor.
+Less feature-rich is the Awestruct framework, which is most notably used for generating the Asciidoctor.org website.
+
+In do however believe that both these great Asciidoctor oriented static site generators fail to subscribe to the great toolset that is Asciidoctor.
+In particular the Asciidoctor diagram and Asciidoctor Extensions projects provide great features for enriching the plain but well-defined base of Asciidoc(tor).
+
+Taking the LaTeX ecosystem as a parallel universe, there is a large difference in the number of integrations available.
+Although the syntax of Asciidoctor and the Ruby code-base are easier to read and understand compared to TeX based packages, still the number of tools available for LaTeX is vast.
+A notable benefit of the ecosystem is the way in which all the packages seem to tie into the generic LaTeX rendering layer, resulting in an ecosystem where all packages can be mixed and matched, regardless of the output format.
+This is unfortunately not so much the case for Asciidoctor, which has several content add-ins and several redering back-ends, but no complete support for all possible combinations.
+
+In order to bring such compatibility, a larger development effort is needed.
+And I consider this blog revamp my personal motivator in this regard.
+By refusing to rely on static site generation tools other than a Makefile for easy 'making', all the magic has to come from Asciidoctor itself.
+I assume this will result in me having to stretch the possibilities of Asciidoctor to the max, and write a number of extensions underway, but that will be for the better.
+
+So expect this blog to be changing more frequently in the coming period, if only for the underlying Asciidoctor tooling.
+
+nav::[]
