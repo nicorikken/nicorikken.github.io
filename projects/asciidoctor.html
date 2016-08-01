@@ -550,13 +550,8 @@ Some of my desired features still need to be implemented using Asciidoctor nativ
 <p><i class="fa fa-square-o"></i> Generic header bar, if only with the page title, also to easily return to the home page.</p>
 </li>
 <li>
-<<<<<<< Updated upstream
-<p><i class="fa fa-square-o"></i> Navigation between pages using icons.
-<em>An initial ongoing attempt can be found in my <a href="https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/67">toc-nav PR</a></em>.</p>
-=======
 <p><i class="fa fa-check-square-o"></i> Navigation between pages using icons.
 <em>A decent attempt can be found in my <a href="https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/67">toc-nav PR</a></em>.</p>
->>>>>>> Stashed changes
 </li>
 <li>
 <p><i class="fa fa-square-o"></i> Dedicated format for an article summary.</p>
@@ -565,11 +560,7 @@ Some of my desired features still need to be implemented using Asciidoctor nativ
 <p><i class="fa fa-square-o"></i> Automatic Atom feed generation, possibly by using the <a href="https://en.wikipedia.org/wiki/HAtom">hAtom</a> microformat in the HTML output.</p>
 </li>
 <li>
-<<<<<<< Updated upstream
-<p><i class="fa fa-square-o"></i> Replace <code>mailto:</code> links with small inline Javascript obfuscation code to prevent scrapers from reading the valid email addresses.</p>
-=======
 <p><i class="fa fa-check-square-o"></i> Replace <code>mailto:</code> links with small inline Javascript obfuscation code to prevent scrapers from reading the valid email addresses. <em>I&#8217;ve achieved this by <a href="https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/70">porting a similar Middleman extension</a></em>.</p>
->>>>>>> Stashed changes
 </li>
 </ul>
 </div>
@@ -610,26 +601,24 @@ In it&#8217;s current state the plugin is working, but it is not as pretty.</p>
 <h2 id="_asciidoctor_extensions"><a class="link" href="#_asciidoctor_extensions">Asciidoctor extensions</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Apart from the desired functionality mentioned in the <a href="#_asciidoctor_based_blog">Asciidoctor based blog</a> section, I&#8217;d like to see other functionality come into reality as well:</p>
+<p>Apart from the desired functionality mentioned in the <a href="#_asciidoctor_based_blog">Asciidoctor based blog</a> section, I&#8217;d like to see other functionality come into reality as well.</p>
 </div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-square-o"></i> Support for editorial markup and notes, as mentioned in a dedicated <a href="https://github.com/asciidoctor/asciidoctor/issues/1031">GitHub issue</a>.</p>
-</li>
-</ul>
+<div class="sect2">
+<h3 id="_support_for_editorial_markup_and_notes"><a class="link" href="#_support_for_editorial_markup_and_notes">Support for editorial markup and notes</a></h3>
+<div class="paragraph">
+<p>As mentioned in a dedicated <a href="https://github.com/asciidoctor/asciidoctor/issues/1031">GitHub issue</a>.
+Rather than directly using the syntax of the <a href="http://criticmarkup.com/">criticmarkup project</a> it makes more sense to me to use an inline macro syntax.
+It could have similar properties as the quote macro has.
+Then in addition the criticmarkup could be supported, by parsing the Asciidoc source in the extension.</p>
 </div>
 <div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="projects"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-<<<<<<< Updated upstream
-Last updated 2016-07-25 07:10:24 CEST
-=======
-Last updated 2016-07-25 23:30:05 CEST
->>>>>>> Stashed changes
+Last updated 2016-08-01 21:20:14 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>

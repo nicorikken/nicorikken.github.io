@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Nico Rikken</title>
+<meta name="author" content="Nico Rikken">
+<title>Batch YouTube-dl task</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -522,76 +523,143 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Nico Rikken</h1>
+<h1>Batch YouTube-dl task</h1>
+<div class="details">
+<span id="author" class="author">Nico Rikken</span><br>
+<span id="revdate">2016-08-01</span>
+</div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-07-21-starting-a-blog-in-asciidoc.html#" title="Starting a blog in asciidoc"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_youtube_music"><a class="link" href="#_youtube_music">YouTube music</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Welcome on the new version of my home-page.
-I&#8217;m reworking it to be based on native Asciidoctor, one of the projects I contribute to.
-More on this is describe in <a href="posts/2016-07-21-starting-a-blog-in-asciidoc.html">my dedicated post</a>.</p>
+<p>There is just so many music available to people on YouTube, it&#8217;s amazing.
+And with the advanced screening and copyright infringement reporting policies, as a user you can rest assured that the music on YouTube is available for you on purpose.</p>
+</div>
+<div class="paragraph">
+<p>To utilize this music availability, I use <a href="http://yt-dl.org/">YouTube-dl</a>.
+YouTube-dl is a tool that allows you to (batch) search, select, download and convert video&#8217;s.
+The tool itself is not constrained to the use-case of YouTube, but that is just the provider this posts focuses on.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_pages"><a class="link" href="#_pages">Pages</a></h2>
+<h2 id="_commandline_power"><a class="link" href="#_commandline_power">Commandline power</a></h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="pages/about.html">About</a></p>
-</li>
-<li>
-<p><a href="pages/contact.html">Contact</a></p>
-</li>
-<li>
-<p><a href="pages/experience.html">Experience</a></p>
-</li>
-<li>
-<p><a href="pages/skills.html">Skills</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>This is the command I&#8217;ve been using thus far for <code>youtube-dl</code> to download multiple tracks based on the <code>tracksearch.txt</code> file.</p>
+</div>
+<div class="listingblock">
+<div class="title">youtube-dl command</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ youtube-dl --default-search ytsearch2: -a tracksearch.txt --max-filesize 10M --min-views 1000 -f bestaudio -x --audio-format mp3 --audio-quality 192</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">tracksearch.txt</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="txt">lee rosevere - earthmover
+brad sucks - making me nervous</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_breaking_it_down"><a class="link" href="#_breaking_it_down">Breaking it down</a></h3>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Search</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--default-search ytsearch2:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">search via YouTube, and return 2 video&#8217;s, to have 1 failover if selectors <code>--max-filesize</code> and <code>--min-views</code> fail.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-a tracksearch.txt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use the lines of the <code>tracksearch.txt</code> as a starting point.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Selection</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--max-filesize 10M</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ignore found video&#8217;s with a file-size larger than 10Mb (video-file), which are likely to be full albums rather than single tracks.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--min-views 1000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ignore found video&#8217;s with a view count under 1000, to prevent downloading bad uploads.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. Download</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-f bestaudio</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Download the video format with the best audio format, as we&#8217;re going for audio only in this case.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 4. Conversion</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-x</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extract audio from the downloaded video.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--audio-format mp3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert to mp3 file format. <em>I&#8217;ve chosen <code>mp3</code> for playback compatibility, but the open standard <code>ogg</code> format can be selected as well, which has better audio quality performance as an added benefit.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--audio-quality 192</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Convert to audio quality of 192kbps, good enough for this use-case.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_recent_posts"><a class="link" href="#_recent_posts">Recent posts</a></h2>
+<h2 id="_room_for_improvement"><a class="link" href="#_room_for_improvement">Room for improvement</a></h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="posts/2016-08-01-batch-youtube-dl-task.html">Batch YouTube-dl task</a> - 2016-08-01</p>
-</li>
-<li>
-<p><a href="posts/2016-07-21-starting-a-blog-in-asciidoc.html">Starting a blog in asciidoc</a> - 2016-07-21</p>
-</li>
-<li>
-<p><a href="posts/2015-05-05-gajim-and-gpg-agent.html">Gajim and GPG Agent</a> - 2015-05-05</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
-<p><em>more posts in the <a href="posts/index.html">posts index &#8594;</a></em></p>
+<p>Now if multiple video&#8217;s (2 for this case) pass the viewcount and filesize selectors, all videos will be downloaded and converted.
+Ideally only 'the best' video will be downloaded.
+Likewise, appending the <code>--get-duration</code> option to the command will show the duration for the video, to ensure the downloaded song will not be too short or too long of a duration.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_active_projects"><a class="link" href="#_active_projects">Active projects</a></h2>
+<h2 id="_a_free_music_alternative"><a class="link" href="#_a_free_music_alternative">A free music alternative</a></h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="projects/asciidoctor.html">Asciidoctor</a></p>
-</li>
-<li>
-<p><a href="projects/atom-glm-language-support.html">Atom GridLAB-D language support</a></p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
-<p><em>other projects in the <a href="projects/index.html">projects index &#8594;</a></em></p>
+<p>Although this solution works well for several use-cases, I want to use this post to direct you to the <a href="http://freemusicarchive.org/">Free Music Archive</a>, a curated selection of free (as in freedom) music.
+A lot of music is actually <code>CC-NC</code>, so NonCommercial usage allowed, but let this not ruin your party.
+There are a lot of great artists on this platform, and there are several ways the platform supports discoverability of this great music.</p>
 </div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-07-21-starting-a-blog-in-asciidoc.html#" title="Starting a blog in asciidoc"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 </div>
 </div>
