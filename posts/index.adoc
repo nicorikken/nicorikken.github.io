@@ -2,11 +2,12 @@
 :navicons:
 :nav-home: <<../index.adoc#,home>>
 :nav-next: <<../projects/index.adoc#,projects>>
-:nav-down: <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>>
+:nav-down: <<2016-08-02-static-site-with-seperate-source-branch.adoc#,Static site with seperate source branch>>
 
 nav::[]
 
 .2016
+* <<2016-08-02-static-site-with-separate-source-branch.adoc#,Static site with separate source branch>> - 2016-08-02
 * <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>> - 2016-08-01
 * <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>> - 2016-07-21
 

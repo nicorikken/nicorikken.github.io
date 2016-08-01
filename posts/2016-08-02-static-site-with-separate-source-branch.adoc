@@ -1,0 +1,106 @@
+= Static site with separate source branch
+:author: Nico Rikken
+:revdate: 2016-08-02
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up: <<index.adoc#,posts>>
+:nav-prev: <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>>
+
+This post is dedicated to the use-case where there are 2 different branches in a project.
+Typically one branch is for the source files, and one is for the generated output files for publishing.
+This use-case matches the way in which this website is currently hosted, via link:https://pages.github.com/[GitHub pages].
+Then the `master` branch is eventually published, whereas other branches remain in the repositories only.
+
+nav::[]
+
+[NOTE]
+Typically generated websites have a dedicated distribution directory like `dist` in which the generated files end up.
+This use-case covers a different use-case where the generated `.html` files end up next to the `.adoc` source files.
+
+== Setup
+Just some prepwork is needed to get this working.
+
+=== Branches
+We have two seperate branches, one for the source files `src`, and one for the generated output for publishing `master`.
+As there is little to no correlation between both branches, the `--orphan` option can be used during the `git checkout` to prevent branches from forcefully bing associated with each other.
+
+.Git branches
+[source, bash]
+----
+$ git branch -a
+  master
+* src
+  remotes/origin/master
+  remotes/origin/src
+----
+
+=== Gitignore
+Part of the trick is not to ignore the output `.html` files in the `src` branch, to make it available for the git commands.
+The source `.adoc` files can be ignored from out of the `master` branch, but that is mainly to reduce the effect of those _oops moments_.
+
+== Doing the transfer dance
+To successfully generate the output files and have them end up in the `master` branch we need to do a little dance.
+The actual transfer is being done via `git stash`.
+
+=== From source to stash
+
+TIP: If you are unexperienced with Git, just know you can always run `git status` to get an overview of the current state of the repository.
+
+.Checkout src branch
+[source, bash]
+----
+$ git checkout src
+----
+
+.Generate output files
+[source, bash]
+----
+$ make html
+asciidoctor index.adoc
+asciidoctor posts/index.adoc
+asciidoctor posts/2016-08-02-static-site-with-separate-source-branch.adoc
+----
+
+.Put output files in stash
+[source, bash]
+----
+$ git add *.html **/*.html
+----
+
+.From cached to stash
+[source, bash]
+----
+$ git stash
+----
+
+=== From stash to master
+
+.Checkout master branch
+[source, bash]
+----
+$ git checkout master
+----
+
+.Remove previous generated files
+[source, bash]
+----
+$ git rm *.html **/*.html
+----
+
+.Apply stash
+[source, bash]
+----
+$ git stash pop
+----
+
+The new and modified files are automatically added as _staged_ in git, so making a commit will do.
+
+.Commit the new files
+[source, bash]
+----
+$ git commit -m "chore: site update"
+
+----
+
+[NOTE]
+If your use-case covers more or different files than the HTML files in this example, then replace the `&#42;.html &#42;&#42;/&#42;.html` globbing patterns with different patterns that match your output files.

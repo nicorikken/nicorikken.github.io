@@ -5,6 +5,7 @@
 :nav-home: <<../index.adoc#,home>>
 :nav-up: <<index.adoc#,posts>>
 :nav-prev: <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>>
+:nav-next: <<2016-08-02-static-site-with-separate-source-branch.adoc#,Static site with separate source branch>>
 
 nav::[]
 
