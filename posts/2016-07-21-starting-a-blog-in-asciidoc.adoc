@@ -5,6 +5,7 @@
 :nav-home: <<../index.adoc#,home>>
 :nav-up: <<index.adoc#,posts>>
 :nav-prev: <<2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>>
+:nav-next: <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>>
 
 nav::[]
 

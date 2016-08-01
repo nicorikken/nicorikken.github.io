@@ -37,8 +37,12 @@ If I where to do it over (and I've been prototyping some of it), I would make it
 . Improve Perun to use the new _send_ option for communicating between Boot pods, to work around the metadata content size restrictions.
 
 == Asciidoctor extensions
-Apart from the desired functionality mentioned in the <<Asciidoctor based blog>> section, I'd like to see other functionality come into reality as well:
+Apart from the desired functionality mentioned in the <<Asciidoctor based blog>> section, I'd like to see other functionality come into reality as well.
 
-- [ ] Support for editorial markup and notes, as mentioned in a dedicated link:https://github.com/asciidoctor/asciidoctor/issues/1031[GitHub issue].
+=== Support for editorial markup and notes
+As mentioned in a dedicated link:https://github.com/asciidoctor/asciidoctor/issues/1031[GitHub issue].
+Rather than directly using the syntax of the link:http://criticmarkup.com/[criticmarkup project] it makes more sense to me to use an inline macro syntax.
+It could have similar properties as the quote macro has.
+Then in addition the criticmarkup could be supported, by parsing the Asciidoc source in the extension.
 
 nav::[]
