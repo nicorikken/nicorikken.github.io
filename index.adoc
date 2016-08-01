@@ -11,6 +11,7 @@ More on this is describe in <<posts/2016-07-21-starting-a-blog-in-asciidoc.adoc#
 * <<pages/skills.adoc#,Skills>>
 
 == Recent posts
+* <<posts/2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>> - 2016-08-01
 * <<posts/2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>> - 2016-07-21
 * <<posts/2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>> - 2015-05-05
 
