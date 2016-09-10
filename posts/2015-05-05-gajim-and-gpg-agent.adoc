@@ -7,6 +7,7 @@ Nico Rikken
 :navicons:
 :nav-home: <<../index.adoc#,home>>
 :nav-up: <<index.adoc#,posts>>
+:nav-prev: <<2015-05-05-my-c720p-upgrade-to-freedom.adoc#,My C720P upgrade to freedom>>
 :nav-next: <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>>
 
 nav::[]

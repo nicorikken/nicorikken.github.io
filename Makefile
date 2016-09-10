@@ -25,7 +25,7 @@ ASCIIDOCTOR_PDF = asciidoctor-pdf
 # Fonts and styles
 FONTSDIR = $(TOP)/assets/fonts
 #PFDFONTSDIR = -a pdf-fontsdir=$(FONTSDIR)
-#HTMLSTYLE = -a stylesheet=$(TOP)/asciidoctor.css
+HTMLSTYLE = -a stylesheet=$(TOP)/assets/styles/dieter.css
 #PDFSTYLE = $(PDFFONTSDIR) -a pdf-style=$(TOP)/asciidoctor.yml
 #REVEALSTYLE = $(TOP)/revealjs/
 EXTDIR = $(TOP)/../asciidoctor-extensions-lab/lib
@@ -120,11 +120,13 @@ ifeq ($(OS), Linux)
 #	find $(TOP)/* -type f -regextype egrep -regex ".*\.(html|pdf)" -exec rm "{}" ";"
 	find $(TOP)/* \
 	-path $(TOP)/assets -prune -o \
+	-path $(TOP)/blog -prune -o \
 	-type f -regextype egrep -regex ".*\.(html|pdf)" -exec rm "{}" ";"
 else ifeq ($(OS), Darwin)
 #	find $(TOP)/* -type f -E * -regex ".*\.(html|pdf)" -exec rm "{}" ";"
 	find $(TOP)/* \
 	-path $(TOP)/assets -prune -o \
+	-path $(TOP)/blog -prune -o \
 	-type f -E * -regex ".*\.(html|pdf)" -exec rm "{}" ";"
 else
   $(error Operating system not supported)

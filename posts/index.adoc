@@ -13,3 +13,4 @@ nav::[]
 
 .2015
 * <<2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>> - 2015-05-05
+* <<2015-05-05-my-c720p-upgrade-to-freedom.adoc#,My C720P upgrade to freedom>> - 2015-05-05
