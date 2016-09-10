@@ -1,0 +1,49 @@
+= Offline Android OpenStreetMap mapping
+:author: Nico Rikken
+:revdate: 2016-08-23
+
+Last year I did my first mapping during my holiday.
+I guess any reason would be a valid reason to contribute spare time to OpenStreetMap (OSM), but in this particular case the bird zoo we were going to was hardly mapped on OSM.
+For OSM mappers this can only mean one thing: a great opportunity to bring value with a mapping contribution.
+And so I did.
+
+== Last year
+Without an internet connection at the time (last year), it was hard to get a GPS fix, and even then my battery would run out of juicy pretty quickly.
+So I finally ended up writing some notes, taking some pictures, and do the final OSM mapping with the Bing sattelite imagery and the zoo's map I got at the entrance.
+I was able to crank out the zoo roughly, but I know things could have been better.
+Well, a good initial step.
+
+== This year
+We went to the same place, and decided to visit the same zoo.
+That again meant a clear opportunity to contribute to OSM.
+Looking at the current state of the mapping, little to nothing had changed since my mapping last year, so every improvement would be a clear win.
+And I already knew there was still some low-hanging fruit.
+
+=== Preparation
+I still lack a mobile internet connection internationally, and from experience I know my _Fairphone 2_ without network assistance or WIFI maps (which I assumed would be of no use at the park) would take about 15 minutes to get a proper fix.
+So unless I would get a hold of some powerbank solution, using GPS and mapping with _OSMTracker for Android_ would be a no-go.
+I went looking for a solution in my solution provider F-Droid.
+
+=== Tabulae
+Most notably I came across _Tabulae_ which should be able to download OSM map tiles locally for offline viewing, and enable some point of interest commits.
+I was able to get an initial preview, but downloading the tiles failed on multiple occasions.
+My best bet is that the shipped version of _Tabulae_ is no longer compatible with the latest OSM tile URL's.
+
+=== OsmAnd~
+Eventually I came back to my trusted OSM client _OsmAnd~_.
+Lucally my changes of last year were already included in the map version I had loaded, so I could use it as a base.
+
+== Mapping with OsmAnd~
+Although _OsmAnd~_ offers an explicit plugin feature to take video and audio notes, my approach was much more makeshift.
+I created a seperate _category_ in my _favorites_, dedicated for mapping notes.
+To add a note on a particular place on the map, I would touch the location and add it as a _favorite_ in the _mapping_ category.
+The name of the favorite, which can be quite long, would hint me to what was going on.
+Mapping the final outcome was also supported by pictures I took, to provide a better reference.
+
+.Steps summarized
+. Install _OsmAnd~_, download the latest map of what you are about to map (as a reference).
+. Create a seperate _favorite_ category in _OsmAnd~_ to prevent interference with your normal favorites.
+. Navigate in the app towards the location you want to put a note, select it, and add a favorite.
+. Name the favorite to give the most useful description.
+. Take additional pictures, notes, video, and sound recordings seperately to provide more information if desired.
+. Use your favorites and additional notes to make your contribution to OpenStreetMap.
