@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Nico Rikken">
-<title>Static site with separate source branch</title>
+<title>Ubuntu calling freedom</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -850,166 +850,46 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Static site with separate source branch</h1>
+<h1>Ubuntu calling freedom</h1>
 <div class="details">
 <span id="author" class="author">Nico Rikken</span><br>
-<span id="revdate">2016-08-02</span>
+<span id="revdate">2015-02-14</span>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>This post is dedicated to the use-case where there are 2 different branches in a project.
-Typically one branch is for the source files, and one is for the generated output files for publishing.
-This use-case matches the way in which this website is currently hosted, via <a href="https://pages.github.com/">GitHub pages</a>.
-Then the <code>master</code> branch is eventually published, whereas other branches remain in the repositories only.</p>
-</div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-08-01-batch-youtube-dl-task.html#" title="Batch YouTube-dl task"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Typically generated websites have a dedicated distribution directory like <code>dist</code> in which the generated files end up.
-This use-case covers a different use-case where the generated <code>.html</code> files end up next to the <code>.adoc</code> source files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setup"><a class="link" href="#_setup">Setup</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Just some prepwork is needed to get this working.</p>
-</div>
-<div class="sect2">
-<h3 id="_branches"><a class="link" href="#_branches">Branches</a></h3>
-<div class="paragraph">
-<p>We have two seperate branches, one for the source files <code>src</code>, and one for the generated output for publishing <code>master</code>.
-As there is little to no correlation between both branches, the <code>--orphan</code> option can be used during the <code>git checkout</code> to prevent branches from forcefully bing associated with each other.</p>
-</div>
-<div class="listingblock">
-<div class="title">Git branches</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git branch -a
-  master
-* src
-  remotes/origin/master
-  remotes/origin/src</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gitignore"><a class="link" href="#_gitignore">Gitignore</a></h3>
-<div class="paragraph">
-<p>Part of the trick is not to ignore the output <code>.html</code> files in the <code>src</code> branch, to make it available for the git commands.
-The source <code>.adoc</code> files can be ignored from out of the <code>master</code> branch, but that is mainly to reduce the effect of those <em>oops moments</em>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_doing_the_transfer_dance"><a class="link" href="#_doing_the_transfer_dance">Doing the transfer dance</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To successfully generate the output files and have them end up in the <code>master</code> branch we need to do a little dance.
-The actual transfer is being done via <code>git stash</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="_from_source_to_stash"><a class="link" href="#_from_source_to_stash">From source to stash</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you are unexperienced with Git, just know you can always run <code>git status</code> to get an overview of the current state of the repository.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Checkout src branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout src</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Generate output files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ make html
-asciidoctor index.adoc
-asciidoctor posts/index.adoc
-asciidoctor posts/2016-08-02-static-site-with-separate-source-branch.adoc</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Put output files in stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git add *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">From cached to stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_from_stash_to_master"><a class="link" href="#_from_stash_to_master">From stash to master</a></h3>
-<div class="listingblock">
-<div class="title">Checkout master branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Remove previous generated files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git rm *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Apply stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash pop</code></pre>
-</div>
+<p>So far the flash sales of the first Ubuntu phone <a href="http://www.omgubuntu.co.uk/2015/02/bq-ubuntu-phone-goes-sale-next-week-e169-meizu-device-coming-soon">by Bq</a> has been <a href="http://www.omgubuntu.co.uk/2015/02/96735">sold out</a>, and certainly not without a reason: the Ubuntu phone holds great promises for both the users and the development community. On the FSFE <a href="https://mail.fsfeurope.org/mailman/listinfo/discussion">Discussion mailinglist</a> I already gave a quick and general <a href="http://mail.fsfeurope.org/pipermail/discussion/2015-February/010456.html">overview</a> mostly based on a recent Linux Unplugged <a href="http://www.jupiterbroadcasting.com/77087/ubuntu-calling-lup-79/">podcast</a>, and so in this post I’d like to revisit my comments with a focus on freedom, as this is lacking in <a href="http://opensource.com/business/15/2/what-ubuntu-phone-could-mean-open-source">other</a> articles. One word of caution though, I haven’t yet read formal documents or code, so all listed info is second-hand.</p>
 </div>
 <div class="paragraph">
-<p>The new and modified files are automatically added as <em>staged</em> in git, so making a commit will do.</p>
+<p>First off, embedded devices are difficult, and phones in particular are hard, like Fairphone for instance has <a href="https://blogs.fsfe.org/pboddie/?p=802">come to find</a>. The problem with phone-hardware in general, is the fact that a build is needed for a specific phone since auto-discovery of peripherals like on a regular computer is missing. Add to that the fact that electronics are developed more rapidly than free drivers an be developed, as was the case for the <a href="http://nicorikken.eu/blog/why-eoma68-will-advance-both-free-software-and-free-hardware/">Vivaldi tablet</a>. So unless you have a say in the electronics, and allow a non-signed bootloader, it is very hard and especially time-consuming to develop this lowest layer as free software. and that is also why project like <a href="http://neo900.org/">Neo900</a> and <a href="http://projects.goldelico.com/p/gta04-main/">GTA04</a> exist. One of the added benefits the GTA04 offers, is that the modem is physically separated from other processors, as the modem implementation is locked-down by law. This is about as free software supporting as free hardware designs can get, but this freedom comes at a cost in performance and money, thus requiring plenty of commitment to become a reality.</p>
 </div>
-<div class="listingblock">
-<div class="title">Commit the new files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git commit -m &quot;chore: site update&quot;</code></pre>
+<div class="paragraph">
+<p>So in order to actually ship a product, using non-free designs and chips will be the default option, like Ubuntu did in this instance. In order to get a kernel running the device-specific board support package offers the prerequisites needed to boot the Linux kernel. But rather than modifying the Linux kernel and building a tightly integrated software stack for a particular device, as is the case for Android, <a href="https://en.wikipedia.org/wiki/Ubuntu_phone">Ubuntu Phone</a> separates the software stack in two separate layers: a device-specific part and a Ubuntu-part. This separation is ingenious and brings great benefits.</p>
 </div>
+<div class="paragraph">
+<p>By having a separate Ubuntu-part, this can be updated in the future, without having to do revisions on the device-specific part, thus allowing all models to stay up to date with the newest Ubuntu, and thus avoiding both the platform segregation of Android and the limited number of firmware updates like on iOS. Users can thus still get security fixes and the features newer applications might rely on. Also regarding this part, it would be possible to run a different top layer for a specific mobile operator, or run a different interface on top of this Ubuntu separation layer. I haven’t looked into this layer, but ideally it should be a clean and stable in order to allow others to adopt it.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If your use-case covers more or different files than the HTML files in this example, then replace the <code>&#42;.html &#42;&#42;/&#42;.html</code> globbing patterns with different patterns that match your output files.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Likewise the bottom part can be swapped. For instance an Ubuntu Phone port was made to the <a href="https://wiki.ubuntu.com/Touch/Devices#line-45">Nexus 5</a>, which was done by building the necessary but limited hardware support and offering the separation layer. Due to the additional separation, this port will be able to keep up with firmware updates, and so all additional development efforts can go towards improving the device-specific part rather than keeping up with firmware versions. Depending on the required complexity of this device-specific layer, porting additional devices is relatively easy and particularly fruitful as it can remain nearly a one-time effort.</p>
 </div>
+<div class="paragraph">
+<p>I’m not aware how free the Ubuntu-part is, although I assume this would be in line with other Ubuntu distributions where it mostly adheres to your needs for freedom. The interface is based on Qt5 and is very supportive of HTML5 applications. In this way mobile applications would be able to run on the Ubuntu desktop in the same matter, offering a great convergence solution. Also it is supportive of efforts being made to put forward HTML5 applications for a run-everywhere solution. There is no policy which requires applications to be free, so you can install all kinds of applications, of which a <a href="https://appstore.bhdouglass.com/apps">long list</a> is already available. Users are able to sideload applications, avoiding the dependence on an appstore, which is probably the reason why no appstore was launched by Ubuntu just yet. Of no less importance, it <a href="https://www.youtube.com/watch?v=TShKZLeZzWE">seems</a> to be well designed and offer great usability.</p>
 </div>
+<div class="paragraph">
+<p>One somewhat overlooked part, is the availability of <a href="https://www.youtube.com/watch?v=vm2NUl1_kSA">scopes</a>. They aren’t as much overlooked in functionality, but rather in philosophy. Android and iOS have recently realized that apps can be complementary and it is up to the firmware to provide the integration. This can be news and weather, but more recently health and home automation seem relevant as well. The fact that scopes can either work with local data or on the internet but not both, respects the capabilities of the device and prevents unwanted data transmission. More importantly by offering aggregated scopes, you can create a locally generated view. This adheres to the vision of a web which is decentralized rather than centralized and in which each computer has many outgoing connections.</p>
 </div>
+<div class="paragraph">
+<p>Of course the big elephant in the room is that the phone ties into the Ubuntu ecosystem and so convergence would be best between the Ubuntu phone and the Ubuntu desktop, and likewise it would bring a boost to the Ubuntu store, Ubuntu <a href="http://www.ubuntu.com/things">Snappy Core</a> and presumably to cloud services. So what if Ubuntu would be the next big platform? Well, it would bring a very free firmware which is very friendly to porting devices, it would encourage development in HTML5 and Qt, it would encourage more decentralized applications, it would enable development of the Ubunthu phone itself, and it would put a great alternative next to the Google-ized Android and other systems.</p>
 </div>
+<div class="paragraph">
+<p>Either way, I nearly bought one but I just missed out by the flash-sale. I’d strongly consider ordering one, because I believe this stack is much more freedom-respecting than Android. More frustrating my perfectly fine phone is still on Android 2.2 with a lack of application support and a whole load of known bugs. I haven’t looked deep enough into Jolla or Tizen to judge them. There are many known improvements available to be adopted, both in hardware, firmware and the available applications. Currently however this seems to be a great phone, with a great software platform, which is another stepping stone in the right direction.</p>
+</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-11 08:17:46 CEST
+Last updated 2016-09-11 08:35:44 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Nico Rikken">
-<title>Static site with separate source branch</title>
+<title>Why EOMA68 will advance both free software and free hardware</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -850,166 +850,31 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Static site with separate source branch</h1>
+<h1>Why EOMA68 will advance both free software and free hardware</h1>
 <div class="details">
 <span id="author" class="author">Nico Rikken</span><br>
-<span id="revdate">2016-08-02</span>
+<span id="revdate">2014-12-24</span>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>This post is dedicated to the use-case where there are 2 different branches in a project.
-Typically one branch is for the source files, and one is for the generated output files for publishing.
-This use-case matches the way in which this website is currently hosted, via <a href="https://pages.github.com/">GitHub pages</a>.
-Then the <code>master</code> branch is eventually published, whereas other branches remain in the repositories only.</p>
-</div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-08-01-batch-youtube-dl-task.html#" title="Batch YouTube-dl task"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Typically generated websites have a dedicated distribution directory like <code>dist</code> in which the generated files end up.
-This use-case covers a different use-case where the generated <code>.html</code> files end up next to the <code>.adoc</code> source files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setup"><a class="link" href="#_setup">Setup</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Just some prepwork is needed to get this working.</p>
-</div>
-<div class="sect2">
-<h3 id="_branches"><a class="link" href="#_branches">Branches</a></h3>
-<div class="paragraph">
-<p>We have two seperate branches, one for the source files <code>src</code>, and one for the generated output for publishing <code>master</code>.
-As there is little to no correlation between both branches, the <code>--orphan</code> option can be used during the <code>git checkout</code> to prevent branches from forcefully bing associated with each other.</p>
-</div>
-<div class="listingblock">
-<div class="title">Git branches</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git branch -a
-  master
-* src
-  remotes/origin/master
-  remotes/origin/src</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gitignore"><a class="link" href="#_gitignore">Gitignore</a></h3>
-<div class="paragraph">
-<p>Part of the trick is not to ignore the output <code>.html</code> files in the <code>src</code> branch, to make it available for the git commands.
-The source <code>.adoc</code> files can be ignored from out of the <code>master</code> branch, but that is mainly to reduce the effect of those <em>oops moments</em>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_doing_the_transfer_dance"><a class="link" href="#_doing_the_transfer_dance">Doing the transfer dance</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To successfully generate the output files and have them end up in the <code>master</code> branch we need to do a little dance.
-The actual transfer is being done via <code>git stash</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="_from_source_to_stash"><a class="link" href="#_from_source_to_stash">From source to stash</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you are unexperienced with Git, just know you can always run <code>git status</code> to get an overview of the current state of the repository.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Checkout src branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout src</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Generate output files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ make html
-asciidoctor index.adoc
-asciidoctor posts/index.adoc
-asciidoctor posts/2016-08-02-static-site-with-separate-source-branch.adoc</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Put output files in stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git add *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">From cached to stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_from_stash_to_master"><a class="link" href="#_from_stash_to_master">From stash to master</a></h3>
-<div class="listingblock">
-<div class="title">Checkout master branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Remove previous generated files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git rm *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Apply stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash pop</code></pre>
-</div>
+<p>If you’re not familiar with <a href="http://elinux.org/Embedded_Open_Modular_Architecture/EOMA-68">EOMA68</a>, it’s an open electronic interface standard specifically designed to support the development of small computing devices built-up of free hardware and free software. It is mostly known for it’s involvement in the <a href="http://liliputing.com/2013/11/improv-is-a-75-modular-arm-based-computer-core-eoma-68.html">third attempt</a> for creating the KDE-tablet, known as the <a href="http://www.slashgear.com/spark-plasma-active-7-inch-tablet-revealed-set-to-take-on-android-30211264/">Spark tablet</a> and the <a href="http://liliputing.com/2013/02/vivaldi-kde-open-source-linux-tablet-gets-new-hardware-could-launch-this-spring.html">Vivaldi tablet</a>. In this project it was found that it is impossible to rely on the continuity of hardware specifications by Asian electronic vendors. If your goal is to develop a software stack, targeting changing hardware will consume most of the development resources, rendering the project useless. So it became clear that control of the hardware is very important in the fast-paced world of embedded and mobile computing. The EOMA68 standard is an important stepping stone in this regard, because it defines a strict interface between the processing board which includes the main component drivers and the board it is inserted into to provide all the necessary interfaces for the <a href="http://rhombus-tech.net/community_ideas/">final use-case</a>. This means that the processing boards can be produced at sufficient volumes to enable the desired control over the internal components and thus the free software support. The devices interfacing with the processing boards might be subject to electronic changes, but due to the EOMA68 abstraction, the impact on the software stack will at the very least exclude the basic working of the operating system.</p>
 </div>
 <div class="paragraph">
-<p>The new and modified files are automatically added as <em>staged</em> in git, so making a commit will do.</p>
+<p>So in this way EOMA68 enables the development of free software for this kind of hardware, but it also increases the ability to design free hardware. If a more free option for chips becomes available, the only step involved for freeing the end-user devices is to develop and build new processing boards. This is far easier of a task than incorporating all the interfaces (like screen drivers) and also the production count can be higher since it is more widely applicable. Also in the process of development the new processing board, it could be tested on the existing EOMA68 platforms without having to develop specific setups. For instance new processing boards can be beta-tested by swapping new cards around between people having EOMA68 compatible devices. Likewise new EOMA68 platforms can be developed and tested by comparing the performance between different processing platforms. So say a driver is functional on a general 64-bit architecture, the driver on the other architecture can be tested to produce the same results, all without creating specific setups for each hardware component.</p>
 </div>
-<div class="listingblock">
-<div class="title">Commit the new files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git commit -m &quot;chore: site update&quot;</code></pre>
+<div class="paragraph">
+<p>Then in addition the standard brings the advantage of upgradeable hardware and even shared hardware to the table. The <a href="http://elinux.org/Embedded_Open_Modular_Architecture#PCMCIA_form-factor">PCMCIA-based boards</a> can be handled by consumers without risking ESD-issues and the interface allows repeated plugging and unplugging without deprecating the contacts. So if your laptop gets slower you just buy a new board for it. And by switching your boards around like a domino-game you can consequently upgrade your netbook, tablet, router or even your smartphone as well. You can leave the now spare processing board on the shelf as a back-up or buy an additional platform to fill another need. This type of upgrading reduces cost and e-waste. Another option would be to have true continuity by carrying a processing board and changing its interfaces depending on the need. You could even change to device with another screen type if you would like to work out in the sun or you could use the built-in connectors of the processing board to watch your holiday pictures at a friend’s place.</p>
 </div>
+<div class="paragraph">
+<p>So how can you get on board with this? Well, there is a <a href="https://www.crowdsupply.com/eoma68/micro-desktop">crowdfunding campaign</a> <a href="http://lists.phcomp.co.uk/pipermail/arm-netbook/2014-November/010300.html">about to launch</a> in order to bootstrap this new paradigm. And just as this system enables, a new and more free processing board is <a href="http://rhombus-tech.net/icubecorp/IC1T/news/">already in development</a>.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If your use-case covers more or different files than the HTML files in this example, then replace the <code>&#42;.html &#42;&#42;/&#42;.html</code> globbing patterns with different patterns that match your output files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-11 08:17:46 CEST
+Last updated 2016-09-11 09:12:57 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>

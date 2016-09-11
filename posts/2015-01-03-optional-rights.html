@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Nico Rikken">
-<title>Static site with separate source branch</title>
+<title>Optional rights</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -850,166 +850,40 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Static site with separate source branch</h1>
+<h1>Optional rights</h1>
 <div class="details">
 <span id="author" class="author">Nico Rikken</span><br>
-<span id="revdate">2016-08-02</span>
+<span id="revdate">2015-01-15</span>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>This post is dedicated to the use-case where there are 2 different branches in a project.
-Typically one branch is for the source files, and one is for the generated output files for publishing.
-This use-case matches the way in which this website is currently hosted, via <a href="https://pages.github.com/">GitHub pages</a>.
-Then the <code>master</code> branch is eventually published, whereas other branches remain in the repositories only.</p>
-</div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-08-01-batch-youtube-dl-task.html#" title="Batch YouTube-dl task"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Typically generated websites have a dedicated distribution directory like <code>dist</code> in which the generated files end up.
-This use-case covers a different use-case where the generated <code>.html</code> files end up next to the <code>.adoc</code> source files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setup"><a class="link" href="#_setup">Setup</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Just some prepwork is needed to get this working.</p>
-</div>
-<div class="sect2">
-<h3 id="_branches"><a class="link" href="#_branches">Branches</a></h3>
-<div class="paragraph">
-<p>We have two seperate branches, one for the source files <code>src</code>, and one for the generated output for publishing <code>master</code>.
-As there is little to no correlation between both branches, the <code>--orphan</code> option can be used during the <code>git checkout</code> to prevent branches from forcefully bing associated with each other.</p>
-</div>
-<div class="listingblock">
-<div class="title">Git branches</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git branch -a
-  master
-* src
-  remotes/origin/master
-  remotes/origin/src</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gitignore"><a class="link" href="#_gitignore">Gitignore</a></h3>
-<div class="paragraph">
-<p>Part of the trick is not to ignore the output <code>.html</code> files in the <code>src</code> branch, to make it available for the git commands.
-The source <code>.adoc</code> files can be ignored from out of the <code>master</code> branch, but that is mainly to reduce the effect of those <em>oops moments</em>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_doing_the_transfer_dance"><a class="link" href="#_doing_the_transfer_dance">Doing the transfer dance</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To successfully generate the output files and have them end up in the <code>master</code> branch we need to do a little dance.
-The actual transfer is being done via <code>git stash</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="_from_source_to_stash"><a class="link" href="#_from_source_to_stash">From source to stash</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you are unexperienced with Git, just know you can always run <code>git status</code> to get an overview of the current state of the repository.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Checkout src branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout src</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Generate output files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ make html
-asciidoctor index.adoc
-asciidoctor posts/index.adoc
-asciidoctor posts/2016-08-02-static-site-with-separate-source-branch.adoc</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Put output files in stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git add *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">From cached to stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_from_stash_to_master"><a class="link" href="#_from_stash_to_master">From stash to master</a></h3>
-<div class="listingblock">
-<div class="title">Checkout master branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Remove previous generated files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git rm *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Apply stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash pop</code></pre>
-</div>
+<p>Our societies are built on rights which correspond to social norms; fundamental rights correspond to fundamental norms and local rights correspond to local norms. These rights can either be written down like laws, or they can merely be the practical manifestation of the informal norm. This collection of rights is a product of many, many years of progress, but this unfortunately doesn’t mean we can take them for granted. Every single day our rights are subject to discussion and shifting norms.</p>
 </div>
 <div class="paragraph">
-<p>The new and modified files are automatically added as <em>staged</em> in git, so making a commit will do.</p>
+<p>In recent history it seems that our established rights are no longer taken for granted but are repeatedly being offered as an option. The choice is offered between either keeping your rights or either having some increased convenience or financial benefit. Whilst this does not directly attack our rights, it still does so by way of shifting our norms. If some majority of people aren’t aware of this ‘trap’ and consequently give up their rights, this decreased level of rights becomes the new norm. In these cases the option of choice is hurtful to society, unlike the choice in the marketplace. This choice analogy is however used as an argument to justify the optional rights.</p>
 </div>
-<div class="listingblock">
-<div class="title">Commit the new files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git commit -m &quot;chore: site update&quot;</code></pre>
+<div class="paragraph">
+<p>Recently in the Netherlands the right to choose your doctor was <a href="http://nos.nl/artikel/2009280-eerste-kamer-stemt-tegen-beperking-vrije-artsenkeuze.html">subject to debate</a> in parliament, as the liberal party wanted to offer it as a choice, rather than as a right. Giving up this right would enable a financial benefit to the health insurances resulting from their increased negotiation position. In principle consumers should be able to still have this right available to them, but this market principle only holds if some insurances are offering this freedom of choice and the consumers are in fact aware of this consideration and care enough to defend this right. Erecting a new insurance company that adheres to these norms would be the way of the market, but unfortunately this is easier said than done. This market principle thereby undermines the stack of rights we have built over the years as a society via our democratic process.</p>
 </div>
+<div class="paragraph">
+<p>This grim future of unavailable rights is already a fact in the Dutch educational system, as explained at <a href="http://meldpuntdiscriminatievrijesoftware.org/">this Dutch page</a>. Whilst the Dutch parliament has agreed on the right for people to strictly use open standards and free software during education, there is no single Dutch school offering such an educational program. The reason for this unavailability is that in practice schools can choose their IT-systems and the student in market for education respecting open standards and free software is apparently too small or to distributed. So despite our democratic parliament agreeing on this right, in practice this right is subject to the market offering and as a consequence this right isn’t defended anywhere.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If your use-case covers more or different files than the HTML files in this example, then replace the <code>&#42;.html &#42;&#42;/&#42;.html</code> globbing patterns with different patterns that match your output files.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Another example is the infamous Facebook, which uses their social lock-in principle to trap users into accepting new terms which violate social norms on privacy, intellectual property and copyright. So rather than offering any benefit in return, it leaves not using the service as the only alternative. In order to defend our established rights, we must stand against this violation both as users and as a society. In this regard we can be glad the <a href="https://cbpweb.nl/en">Dutch Data Protection Authority is</a> at least <a href="https://cbpweb.nl/nl/nieuws/cbp-onderzoekt-nieuwe-privacyvoorwaarden-facebook">investigating</a> Facebook’s new terms.</p>
 </div>
+<div class="paragraph">
+<p>Considering established levels of privacy, security, freedom or any other kind or right as a marketable feature is hurtful to society, because it erodes our values, our norms and therefore our rights.</p>
 </div>
+<div class="paragraph">
+<p>This insight was triggered partially by the <a href="https://www.youtube.com/watch?v=BWcUecEGaZM">presentation</a> on Privacy in Context by Helen Nissenbaum and the <a href="http://media.ccc.de/browse/congress/2014/31c3_-<em>6123</em>-<em>en</em>-<em>saal_1</em>-<em>201412291130</em>-<em>freedom_in_your_computer_and_in_the_net</em>-_richard_stallman.html">presentation</a> by Richard Stallman at 31c3.</p>
 </div>
-</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-11 08:17:46 CEST
+Last updated 2016-09-11 08:54:23 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>

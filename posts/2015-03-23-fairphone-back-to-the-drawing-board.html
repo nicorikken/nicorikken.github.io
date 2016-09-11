@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Nico Rikken">
-<title>Static site with separate source branch</title>
+<title>Fairphone back to the drawing board</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -850,166 +850,25 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Static site with separate source branch</h1>
+<h1>Fairphone back to the drawing board</h1>
 <div class="details">
 <span id="author" class="author">Nico Rikken</span><br>
-<span id="revdate">2016-08-02</span>
+<span id="revdate">2015-03-23</span>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2015-05-05-my-c720p-upgrade-to-freedom.html#" title="My C720P upgrade to freedom"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>This post is dedicated to the use-case where there are 2 different branches in a project.
-Typically one branch is for the source files, and one is for the generated output files for publishing.
-This use-case matches the way in which this website is currently hosted, via <a href="https://pages.github.com/">GitHub pages</a>.
-Then the <code>master</code> branch is eventually published, whereas other branches remain in the repositories only.</p>
-</div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-08-01-batch-youtube-dl-task.html#" title="Batch YouTube-dl task"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Typically generated websites have a dedicated distribution directory like <code>dist</code> in which the generated files end up.
-This use-case covers a different use-case where the generated <code>.html</code> files end up next to the <code>.adoc</code> source files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setup"><a class="link" href="#_setup">Setup</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Just some prepwork is needed to get this working.</p>
-</div>
-<div class="sect2">
-<h3 id="_branches"><a class="link" href="#_branches">Branches</a></h3>
-<div class="paragraph">
-<p>We have two seperate branches, one for the source files <code>src</code>, and one for the generated output for publishing <code>master</code>.
-As there is little to no correlation between both branches, the <code>--orphan</code> option can be used during the <code>git checkout</code> to prevent branches from forcefully bing associated with each other.</p>
-</div>
-<div class="listingblock">
-<div class="title">Git branches</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git branch -a
-  master
-* src
-  remotes/origin/master
-  remotes/origin/src</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gitignore"><a class="link" href="#_gitignore">Gitignore</a></h3>
-<div class="paragraph">
-<p>Part of the trick is not to ignore the output <code>.html</code> files in the <code>src</code> branch, to make it available for the git commands.
-The source <code>.adoc</code> files can be ignored from out of the <code>master</code> branch, but that is mainly to reduce the effect of those <em>oops moments</em>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_doing_the_transfer_dance"><a class="link" href="#_doing_the_transfer_dance">Doing the transfer dance</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To successfully generate the output files and have them end up in the <code>master</code> branch we need to do a little dance.
-The actual transfer is being done via <code>git stash</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="_from_source_to_stash"><a class="link" href="#_from_source_to_stash">From source to stash</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you are unexperienced with Git, just know you can always run <code>git status</code> to get an overview of the current state of the repository.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Checkout src branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout src</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Generate output files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ make html
-asciidoctor index.adoc
-asciidoctor posts/index.adoc
-asciidoctor posts/2016-08-02-static-site-with-separate-source-branch.adoc</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Put output files in stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git add *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">From cached to stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_from_stash_to_master"><a class="link" href="#_from_stash_to_master">From stash to master</a></h3>
-<div class="listingblock">
-<div class="title">Checkout master branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Remove previous generated files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git rm *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Apply stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash pop</code></pre>
-</div>
+<p>Previously I’ve shared my <a href="http://nicorikken.eu/blog/ubuntu-calling-for-freedom/">thoughts and concerns</a> on freedom in mobile operating systems. The <a href="http://fairphone.nl/">Fairphone</a> project unfortunately has a bad reputation in this area. Not because they don’t care, but because they failed to deliver on this promise in their first version. Other people involved in open hardware design for mobile devices saw <a href="http://lists.phcomp.co.uk/pipermail/arm-netbook/2015-January/010402.html">it coming</a> as they’ve been struggling with exactly the same issue for many years already. Especially for them it shouldn’t have been a surprise that a perfectly fine hardware platform would <a href="http://www.fairphone.com/2014/12/09/our-approach-to-software-and-ongoing-support-for-the-first-fairphones/">be kept</a> from future firmware updates.</p>
 </div>
 <div class="paragraph">
-<p>The new and modified files are automatically added as <em>staged</em> in git, so making a commit will do.</p>
+<p>But as in any process of innovation, a new version allows for improvements. And so will a new upcoming version of the Fairphone. For months the Fairphone has featured several <a href="https://forum.fairphone.com/t/poll-future-fairphone-os-development/157">lengthy threads</a> discussing alternative, generally more free operating systems. As I tried to state with a <a href="https://forum.fairphone.com/t/poll-future-fairphone-os-development/157/191">lengthy forum post</a> there are multiple interest in strong conflict with each other. So even whether there will be multiple OS flavours or one for all customers is not yet decided. The great news however is that the Fairphone team have taken on this challenge, big time! I’ve had some email conversations with <a href="http://www.fairphone.com/author/kees-jongenburger/">Kees Jongenburger</a> and <a href="http://www.fairphone.com/author/joe/">Joe Mier</a> regarding further plans and options. But more importantly, they went <a href="http://www.fairphone.com/2015/03/17/looking-for-an-open-operating-system-at-mobile-world-congress-2015/">looking for alternatives</a> at the Mobile World Congress. Over the course of the next months the plans will be finalized, so I’d like to encourage anybody with relevant information to contribute to the discussions. Let’s make the next Fairphone far more fair.</p>
 </div>
-<div class="listingblock">
-<div class="title">Commit the new files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git commit -m &quot;chore: site update&quot;</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If your use-case covers more or different files than the HTML files in this example, then replace the <code>&#42;.html &#42;&#42;/&#42;.html</code> globbing patterns with different patterns that match your output files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2015-05-05-my-c720p-upgrade-to-freedom.html#" title="My C720P upgrade to freedom"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-11 08:17:46 CEST
+Last updated 2016-09-11 08:18:53 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>

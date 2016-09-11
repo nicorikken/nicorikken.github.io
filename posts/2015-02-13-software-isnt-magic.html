@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Nico Rikken">
-<title>Static site with separate source branch</title>
+<title>Software isn&#8217;t magic</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -850,166 +850,55 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Static site with separate source branch</h1>
+<h1>Software isn&#8217;t magic</h1>
 <div class="details">
 <span id="author" class="author">Nico Rikken</span><br>
-<span id="revdate">2016-08-02</span>
+<span id="revdate">2015-02-13</span>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>This post is dedicated to the use-case where there are 2 different branches in a project.
-Typically one branch is for the source files, and one is for the generated output files for publishing.
-This use-case matches the way in which this website is currently hosted, via <a href="https://pages.github.com/">GitHub pages</a>.
-Then the <code>master</code> branch is eventually published, whereas other branches remain in the repositories only.</p>
+<p>Last month the news <a href="https://blog.winkelmeyer.com/2015/01/warning-microsofts-outlook-app-for-ios-breaks-your-company-security/">landed</a> that the recent Microsoft Outlook app for Android and iOS was leaking and exploiting login credentials. Because of this leak the European Parliament and some universities have <a href="http://www.theregister.co.uk/2015/02/12/eu_parliament_banning_outlook_app/">blocked</a> the use of this app. Although Microsoft promises double-encryption of the credentials, this specification is an optimistic representation of the actual practice:</p>
 </div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-08-01-batch-youtube-dl-task.html#" title="Batch YouTube-dl task"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Typically generated websites have a dedicated distribution directory like <code>dist</code> in which the generated files end up.
-This use-case covers a different use-case where the generated <code>.html</code> files end up next to the <code>.adoc</code> source files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setup"><a class="link" href="#_setup">Setup</a></h2>
-<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>Just some prepwork is needed to get this working.</p>
+<p>What I saw was breathtaking. A frequent scanning from an AWS IP to my mail account. Means Microsoft stores my personal credentials and server data (luckily I’ve used my private test account and not my company account) somewhere in the cloud! They haven’t asked me. They just scan. So they have in theory full access to my PIM data.</p>
 </div>
-<div class="sect2">
-<h3 id="_branches"><a class="link" href="#_branches">Branches</a></h3>
-<div class="paragraph">
-<p>We have two seperate branches, one for the source files <code>src</code>, and one for the generated output for publishing <code>master</code>.
-As there is little to no correlation between both branches, the <code>--orphan</code> option can be used during the <code>git checkout</code> to prevent branches from forcefully bing associated with each other.</p>
-</div>
-<div class="listingblock">
-<div class="title">Git branches</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git branch -a
-  master
-* src
-  remotes/origin/master
-  remotes/origin/src</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gitignore"><a class="link" href="#_gitignore">Gitignore</a></h3>
-<div class="paragraph">
-<p>Part of the trick is not to ignore the output <code>.html</code> files in the <code>src</code> branch, to make it available for the git commands.
-The source <code>.adoc</code> files can be ignored from out of the <code>master</code> branch, but that is mainly to reduce the effect of those <em>oops moments</em>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_doing_the_transfer_dance"><a class="link" href="#_doing_the_transfer_dance">Doing the transfer dance</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To successfully generate the output files and have them end up in the <code>master</code> branch we need to do a little dance.
-The actual transfer is being done via <code>git stash</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="_from_source_to_stash"><a class="link" href="#_from_source_to_stash">From source to stash</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you are unexperienced with Git, just know you can always run <code>git status</code> to get an overview of the current state of the repository.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Checkout src branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout src</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Generate output files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ make html
-asciidoctor index.adoc
-asciidoctor posts/index.adoc
-asciidoctor posts/2016-08-02-static-site-with-separate-source-branch.adoc</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Put output files in stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git add *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">From cached to stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_from_stash_to_master"><a class="link" href="#_from_stash_to_master">From stash to master</a></h3>
-<div class="listingblock">
-<div class="title">Checkout master branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Remove previous generated files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git rm *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Apply stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash pop</code></pre>
+</blockquote>
+<div class="attribution">
+&#8212; Rene Winkelmeyer
 </div>
 </div>
 <div class="paragraph">
-<p>The new and modified files are automatically added as <em>staged</em> in git, so making a commit will do.</p>
+<p>From an engineering perspective this <a href="https://blog.winkelmeyer.com/2015/02/updates-on-the-latest-outlook-ios-app-issues/">seems to be</a> a straightforward way of offering push messages when the original synchronization interface wasn’t suitable to. But something is of course totally off in the interface of the app. Asking whether or not you’d like to receive push-messages only covers part of the deal. The real result of switching on push-messages can be read in the privacy statement:</p>
 </div>
-<div class="listingblock">
-<div class="title">Commit the new files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git commit -m &quot;chore: site update&quot;</code></pre>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>We provide a service that indexes and accelerates delivery of your email to your device. That means that our service retrieves your incoming and outgoing email messages and securely pushes them to the app on your device.Similarly, the service retrieves the calendar data and address book contacts associated with your email account and securely pushes those to the app on your device. Those messages, calendar events, and contacts, along with their associated metadata, may be temporarily stored and indexed securely both in our servers and locally on the app on your device. If your emails have attachments and you request to open them in our app, the service retrieves them from the mail server, securely stores them temporarily on our servers, and delivers them to the app.</p>
 </div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If your use-case covers more or different files than the HTML files in this example, then replace the <code>&#42;.html &#42;&#42;/&#42;.html</code> globbing patterns with different patterns that match your output files.
-</td>
-</tr>
-</table>
+</blockquote>
+<div class="attribution">
+&#8212; Microsoft<br>
+<cite>Privacy Statement outtake</cite>
 </div>
 </div>
+<div class="paragraph">
+<p>It is a unfortunate combination of a lack of security with an unclear presentation to the user. Likewise I’m curious who actually knows for that Google is <a href="http://www.huffingtonpost.com/2013/09/17/google-wifi-passwords-android_n_3936809.html">storing</a> all WiFi credentials of users having enabled the ‘backup’ option. In fact, these misconceptions of the inner working aren’t an exception, it’s more the usual case. Arne Padmos <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6021.html">spoke</a> at the last CCC and referred to a <a href="https://www.petsymposium.org/2014/papers/Renkema.pdf">research</a> into public perception of email. The over-simplistic drawings on page 15 clearly shows peoples lack of understanding about parties involved. Likewise 29% of U.S. citizens <a href="https://www.citrix.com/news/announcements/oct-2012/cloud-confusion-survey.html">believe</a> the cloud has something to do with the weather, and 95% are using cloud services whilst they thought they weren’t.</p>
 </div>
+<div class="paragraph">
+<p>Software isn’t magic, but unfortunately it isn’t easy to understand for most people either.  I’m certain we can, and should, do better job in educating the general public on these topics. It feels like a big secret waiting to come out, that so many parties and services are involved in getting a service to work. A secret we’d rather not bother a customer with, because the engineers have taken care of it and weighed the pro’s and con’s for the customer. But wouldn’t the customer be better of knowing what decisions underlie a system, to allow an educated choice?</p>
 </div>
+<div class="paragraph">
+<p>In the Netherlands we have standardized <a href="https://www.energieleveranciers.nl/nieuws/500525-veh-energierekening-moet-gestandaardiseerd-worden">obligatory</a> layouts for energy bills so that customers have a better chance of understanding the product. Likewise there is a standard <a href="https://nl.wikipedia.org/wiki/Financiele_bijsluiter">specification</a> describing more complex financial products for a similar goal. In this regard it seems odd that digital services, which are often times highly complex, can get away with obfuscating instead of explaining. If more people would know their emails are <a href="https://obfusk.ch/cryptoparty-privacycafe-slides/index.nl.html#21">like postcards</a>, and would know that many parties handle those emails, I’m certain the demand for encryption would increase.</p>
+</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-11 08:17:46 CEST
+Last updated 2016-09-11 08:47:47 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>

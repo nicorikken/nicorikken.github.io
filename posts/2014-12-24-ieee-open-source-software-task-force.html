@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Nico Rikken">
-<title>Static site with separate source branch</title>
+<title>IEEE Open Source Software Task Force</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -850,166 +850,55 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Static site with separate source branch</h1>
+<h1>IEEE Open Source Software Task Force</h1>
 <div class="details">
 <span id="author" class="author">Nico Rikken</span><br>
-<span id="revdate">2016-08-02</span>
+<span id="revdate">2014-12-24</span>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>This post is dedicated to the use-case where there are 2 different branches in a project.
-Typically one branch is for the source files, and one is for the generated output files for publishing.
-This use-case matches the way in which this website is currently hosted, via <a href="https://pages.github.com/">GitHub pages</a>.
-Then the <code>master</code> branch is eventually published, whereas other branches remain in the repositories only.</p>
+<p>Sometimes an open initiative just ‘clicks’, because it fills a growing need and does so in the right way. Great non-software examples I have come across in recent history are <a href="https://www.wikipedia.org/">Wikipedia</a> <a href="http://www.openstreetmap.org/">OpenStreetMap</a> <a href="http://reprap.org/">RepRap</a> <a href="http://www.diybookscanner.org/">DIY Book Scanner</a> <a href="http://www.wikihouse.cc/">WikiHouse</a> <a href="https://www.opendesk.cc/">OpenDesk</a> and <a href="http://nicorikken.eu/blog/why-eoma68-will-advance-both-free-software-and-free-hardware/">EOMA68</a>. Just yesterday I experienced another such a ‘click’ initiative: the <a href="http://ewh.ieee.org/cmte/psace/CAMS_taskforce/software.htm">IEEE Task Force</a> on Open Source Software for Power Systems. This initiative has a clear <a href="http://ewh.ieee.org/cmte/psace/CAMS_taskforce/index.htm">mission</a> in encouraging free software adoption in this rather conservative field:</p>
 </div>
-<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="2016-08-01-batch-youtube-dl-task.html#" title="Batch YouTube-dl task"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Typically generated websites have a dedicated distribution directory like <code>dist</code> in which the generated files end up.
-This use-case covers a different use-case where the generated <code>.html</code> files end up next to the <code>.adoc</code> source files.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_setup"><a class="link" href="#_setup">Setup</a></h2>
-<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>Just some prepwork is needed to get this working.</p>
+<p>This Task Force explores the potential for open source software (OSS) in the Power Engineering Society (PES). The mission of the Task Force is twofold:</p>
 </div>
-<div class="sect2">
-<h3 id="_branches"><a class="link" href="#_branches">Branches</a></h3>
-<div class="paragraph">
-<p>We have two seperate branches, one for the source files <code>src</code>, and one for the generated output for publishing <code>master</code>.
-As there is little to no correlation between both branches, the <code>--orphan</code> option can be used during the <code>git checkout</code> to prevent branches from forcefully bing associated with each other.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>diffuse the philosophy of OSS in the power systems community</p>
+</li>
+<li>
+<p>promote OSS for the benefit of the PES ranging all the way from simple pedagogical OSS to commercial-grade OSS.</p>
+</li>
+</ol>
 </div>
-<div class="listingblock">
-<div class="title">Git branches</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git branch -a
-  master
-* src
-  remotes/origin/master
-  remotes/origin/src</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_gitignore"><a class="link" href="#_gitignore">Gitignore</a></h3>
-<div class="paragraph">
-<p>Part of the trick is not to ignore the output <code>.html</code> files in the <code>src</code> branch, to make it available for the git commands.
-The source <code>.adoc</code> files can be ignored from out of the <code>master</code> branch, but that is mainly to reduce the effect of those <em>oops moments</em>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_doing_the_transfer_dance"><a class="link" href="#_doing_the_transfer_dance">Doing the transfer dance</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To successfully generate the output files and have them end up in the <code>master</code> branch we need to do a little dance.
-The actual transfer is being done via <code>git stash</code>.</p>
-</div>
-<div class="sect2">
-<h3 id="_from_source_to_stash"><a class="link" href="#_from_source_to_stash">From source to stash</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you are unexperienced with Git, just know you can always run <code>git status</code> to get an overview of the current state of the repository.
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="title">Checkout src branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout src</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Generate output files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ make html
-asciidoctor index.adoc
-asciidoctor posts/index.adoc
-asciidoctor posts/2016-08-02-static-site-with-separate-source-branch.adoc</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Put output files in stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git add *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">From cached to stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_from_stash_to_master"><a class="link" href="#_from_stash_to_master">From stash to master</a></h3>
-<div class="listingblock">
-<div class="title">Checkout master branch</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git checkout master</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Remove previous generated files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git rm *.html **/*.html</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="title">Apply stash</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git stash pop</code></pre>
+</blockquote>
+<div class="attribution">
+&#8212; IEEE Open Source Software Task Force<br>
+<cite>Mission statement</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>The new and modified files are automatically added as <em>staged</em> in git, so making a commit will do.</p>
+<p>Having a power system background, ever since I’ve become aware of free software I’ve wondered about why so little free software is being developed and used in the field of power systems. This concerns both software for calculations and simulations, but also operational systems like <a href="https://en.wikipedia.org/wiki/SCADA">SCADA</a> which could <a href="http://scadastrangelove.blogspot.nl/2014/01/30c3-releases-all-in-one.html">certainly benefit</a> from having more eyes on the code. Also the calculation and simulation software is entering the operation domain now that the increased number of measurements and the available computation power allow for real-time grid analysis.</p>
 </div>
-<div class="listingblock">
-<div class="title">Commit the new files</div>
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="bash">$ git commit -m &quot;chore: site update&quot;</code></pre>
+<div class="paragraph">
+<p>In any case power system software is becoming an ever more important part of the core business of power system development and management. Some vendor-independence and collaboration in development therefore seems to be important and sensible. Current practice however seems to indicate a low level of adoption by the industry, probably because free software has only recently come to the attention of the industry, and because of the lack of companies offering support. The latter has proven to work for the software industry, with <a href="https://en.wikipedia.org/wiki/Red_Hat">Red Hat</a> as a great example.</p>
 </div>
+<div class="paragraph">
+<p>Two listed presentations at the panel sessions of 2009 because it shows the task force cares about software integration. An <a href="http://ewh.ieee.org/cmte/psace/CAMS_taskforce/archive/PESGM2009-000217-slides.pdf">interchangeable data format</a> was discussed which expands upon existing standards to better allow software programs to tie in with each other. Likewise <a href="http://ewh.ieee.org/cmte/psace/CAMS_taskforce/archive/PESGM2009-000970-slides.pdf">GIS integration</a> has been discussed, which is an important development in bridging the gap between the real-world and the simulation model, since the scope of a power system is greater than its individual components.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If your use-case covers more or different files than the HTML files in this example, then replace the <code>&#42;.html &#42;&#42;/&#42;.html</code> globbing patterns with different patterns that match your output files.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The <a href="http://ewh.ieee.org/cmte/psace/CAMS_taskforce/software.htm">software list</a> published by the task force certainly lists some projects I’ll look further into. I certainly hope the efforts of this task force and the listed projects will contribute to a bright power system future.</p>
 </div>
-</div>
-</div>
-</div>
+<div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-11 08:17:46 CEST
+Last updated 2016-09-11 09:03:33 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>
