@@ -25,7 +25,7 @@ ASCIIDOCTOR_PDF = asciidoctor-pdf
 # Fonts and styles
 FONTSDIR = $(TOP)/assets/fonts
 #PFDFONTSDIR = -a pdf-fontsdir=$(FONTSDIR)
-HTMLSTYLE = -a stylesheet=$(TOP)/assets/styles/dieter.css
+HTMLSTYLE = -a stylesheet=$(TOP)/assets/styles/rams.css
 #PDFSTYLE = $(PDFFONTSDIR) -a pdf-style=$(TOP)/asciidoctor.yml
 #REVEALSTYLE = $(TOP)/revealjs/
 EXTDIR = $(TOP)/../asciidoctor-extensions-lab/lib
