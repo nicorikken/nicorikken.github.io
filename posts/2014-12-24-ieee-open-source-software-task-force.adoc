@@ -1,0 +1,31 @@
+// --
+// tags: [Digital freedom, Free software, Power systems, Smart grid]
+// --
+= IEEE Open Source Software Task Force
+:author:   Nico Rikken
+:revdate:  2014-12-24
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+Sometimes an open initiative just ‘clicks’, because it fills a growing need and does so in the right way. Great non-software examples I have come across in recent history are link:https://www.wikipedia.org/[Wikipedia] link:http://www.openstreetmap.org/[OpenStreetMap] link:http://reprap.org/[RepRap] link:http://www.diybookscanner.org/[DIY Book Scanner] link:http://www.wikihouse.cc/[WikiHouse] link:https://www.opendesk.cc/[OpenDesk] and link:http://nicorikken.eu/blog/why-eoma68-will-advance-both-free-software-and-free-hardware/[EOMA68]. Just yesterday I experienced another such a ‘click’ initiative: the link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/software.htm[IEEE Task Force] on Open Source Software for Power Systems. This initiative has a clear link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/index.htm[mission] in encouraging free software adoption in this rather conservative field:
+
+[quote, IEEE Open Source Software Task Force, Mission statement]
+____
+This Task Force explores the potential for open source software (OSS) in the Power Engineering Society (PES). The mission of the Task Force is twofold:
+
+. diffuse the philosophy of OSS in the power systems community
+. promote OSS for the benefit of the PES ranging all the way from simple pedagogical OSS to commercial-grade OSS.
+____
+
+Having a power system background, ever since I’ve become aware of free software I’ve wondered about why so little free software is being developed and used in the field of power systems. This concerns both software for calculations and simulations, but also operational systems like link:https://en.wikipedia.org/wiki/SCADA[SCADA] which could link:http://scadastrangelove.blogspot.nl/2014/01/30c3-releases-all-in-one.html[certainly benefit] from having more eyes on the code. Also the calculation and simulation software is entering the operation domain now that the increased number of measurements and the available computation power allow for real-time grid analysis.
+
+In any case power system software is becoming an ever more important part of the core business of power system development and management. Some vendor-independence and collaboration in development therefore seems to be important and sensible. Current practice however seems to indicate a low level of adoption by the industry, probably because free software has only recently come to the attention of the industry, and because of the lack of companies offering support. The latter has proven to work for the software industry, with link:https://en.wikipedia.org/wiki/Red_Hat[Red Hat] as a great example.
+
+Two listed presentations at the panel sessions of 2009 because it shows the task force cares about software integration. An link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/archive/PESGM2009-000217-slides.pdf[interchangeable data format] was discussed which expands upon existing standards to better allow software programs to tie in with each other. Likewise link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/archive/PESGM2009-000970-slides.pdf[GIS integration] has been discussed, which is an important development in bridging the gap between the real-world and the simulation model, since the scope of a power system is greater than its individual components.
+
+The link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/software.htm[software list] published by the task force certainly lists some projects I’ll look further into. I certainly hope the efforts of this task force and the listed projects will contribute to a bright power system future.
+
+nav::[]

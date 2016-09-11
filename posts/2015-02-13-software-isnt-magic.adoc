@@ -1,0 +1,33 @@
+// --
+// tags: [Digital freedom, Privacy, Security, Web technology]
+// --
+= Software isn't magic
+:author:   Nico Rikken
+:revdate:  2015-02-13
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+Last month the news link:https://blog.winkelmeyer.com/2015/01/warning-microsofts-outlook-app-for-ios-breaks-your-company-security/[landed] that the recent Microsoft Outlook app for Android and iOS was leaking and exploiting login credentials. Because of this leak the European Parliament and some universities have link:http://www.theregister.co.uk/2015/02/12/eu_parliament_banning_outlook_app/[blocked] the use of this app. Although Microsoft promises double-encryption of the credentials, this specification is an optimistic representation of the actual practice:
+
+[quote, Rene Winkelmeyer]
+____
+What I saw was breathtaking. A frequent scanning from an AWS IP to my mail account. Means Microsoft stores my personal credentials and server data (luckily I’ve used my private test account and not my company account) somewhere in the cloud! They haven’t asked me. They just scan. So they have in theory full access to my PIM data.
+____
+
+From an engineering perspective this link:https://blog.winkelmeyer.com/2015/02/updates-on-the-latest-outlook-ios-app-issues/[seems to be] a straightforward way of offering push messages when the original synchronization interface wasn’t suitable to. But something is of course totally off in the interface of the app. Asking whether or not you’d like to receive push-messages only covers part of the deal. The real result of switching on push-messages can be read in the privacy statement:
+
+[quote, Microsoft, Privacy Statement outtake]
+____
+We provide a service that indexes and accelerates delivery of your email to your device. That means that our service retrieves your incoming and outgoing email messages and securely pushes them to the app on your device.Similarly, the service retrieves the calendar data and address book contacts associated with your email account and securely pushes those to the app on your device. Those messages, calendar events, and contacts, along with their associated metadata, may be temporarily stored and indexed securely both in our servers and locally on the app on your device. If your emails have attachments and you request to open them in our app, the service retrieves them from the mail server, securely stores them temporarily on our servers, and delivers them to the app.
+____
+
+It is a unfortunate combination of a lack of security with an unclear presentation to the user. Likewise I’m curious who actually knows for that Google is link:http://www.huffingtonpost.com/2013/09/17/google-wifi-passwords-android_n_3936809.html[storing] all WiFi credentials of users having enabled the ‘backup’ option. In fact, these misconceptions of the inner working aren’t an exception, it’s more the usual case. Arne Padmos link:http://events.ccc.de/congress/2014/Fahrplan/events/6021.html[spoke] at the last CCC and referred to a link:https://www.petsymposium.org/2014/papers/Renkema.pdf[research] into public perception of email. The over-simplistic drawings on page 15 clearly shows peoples lack of understanding about parties involved. Likewise 29% of U.S. citizens link:https://www.citrix.com/news/announcements/oct-2012/cloud-confusion-survey.html[believe] the cloud has something to do with the weather, and 95% are using cloud services whilst they thought they weren’t.
+
+Software isn’t magic, but unfortunately it isn’t easy to understand for most people either.  I’m certain we can, and should, do better job in educating the general public on these topics. It feels like a big secret waiting to come out, that so many parties and services are involved in getting a service to work. A secret we’d rather not bother a customer with, because the engineers have taken care of it and weighed the pro’s and con’s for the customer. But wouldn’t the customer be better of knowing what decisions underlie a system, to allow an educated choice?
+
+In the Netherlands we have standardized link:https://www.energieleveranciers.nl/nieuws/500525-veh-energierekening-moet-gestandaardiseerd-worden[obligatory] layouts for energy bills so that customers have a better chance of understanding the product. Likewise there is a standard link:https://nl.wikipedia.org/wiki/Financiele_bijsluiter[specification] describing more complex financial products for a similar goal. In this regard it seems odd that digital services, which are often times highly complex, can get away with obfuscating instead of explaining. If more people would know their emails are link:https://obfusk.ch/cryptoparty-privacycafe-slides/index.nl.html#21[like postcards], and would know that many parties handle those emails, I’m certain the demand for encryption would increase.
+
+nav::[]

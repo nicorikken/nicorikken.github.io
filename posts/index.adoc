@@ -7,10 +7,44 @@
 nav::[]
 
 .2016
-* <<2016-08-02-static-site-with-separate-source-branch.adoc#,Static site with separate source branch>> - 2016-08-02
-* <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>> - 2016-08-01
-* <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>> - 2016-07-21
+* <<2016-08-02-static-site-with-separate-source-branch.adoc#,Static site with separate source branch>> 2016-08-02
+* <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>> 2016-08-01
+* <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>> 2016-07-21
 
 .2015
-* <<2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>> - 2015-05-05
-* <<2015-05-05-my-c720p-upgrade-to-freedom.adoc#,My C720P upgrade to freedom>> - 2015-05-05
+* <<2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG Agent>> 2015-05-05
+* <<2015-05-05-my-c720p-upgrade-to-freedom.adoc#,My C720P upgrade to freedom>> 2015-05-05
+* <<2015-03-23-fairphone-back-to-the-drawing-board.adoc#,Fairphone back to the drawing board>> 2015-05-23
+* <<2015-02-14-dia-i-love-you.adoc#,Dia, I love you>> 2015-02-14
+* <<2015-02-14-glasvezelkaravaan.adoc#,Glasvezelkaravaan>> 2015-02-14
+* <<2015-02-14-ubuntu-calling-for-freedom.adoc#,Ubuntu calling for freedom>> 2015-02-14
+* <<2015-02-13-software-isnt-magic.adoc#,Software isn't magic>> 2015-02-13
+* <<2015-01-15-why-engineering-students-need-to-be-taught-free-software.adoc#,Why engineering students need to be taught free software>> 2015-01-15
+* <<2015-01-03-optional-rights.adoc#,Optional rights>> 2015-01-03
+
+.2014
+* <<2014-12-24-ieee-open-source-software-task-force.adoc#,IEEE Open Source Software Task Force>> 2014-12-24
+* <<2014-11-21-the-fun-of-free-software.adoc#,The fun of free software>> 2014-11-21
+* <<2014-11-07-why-eoma68-will-advance-both-free-software-and-free-hardware.adoc#,Why EOMA68 will advance both free software and free hardware>> 2014-11-07
+* link:http://nicorikken.eu/blog/circumventing-google-on-mobile/[Circumventing Google on mobile] 2014-11-03
+* link:http://nicorikken.eu/blog/scalability-of-higher-laws/[Scalability of higher laws] 2014-09-19
+* link:http://nicorikken.eu/blog/a-concrete-life-purpose/[A concrete life purpose] 2014-09-18
+* link:http://nicorikken.eu/blog/its-just-technology/[It's just technology] 2014-09-14
+* link:http://nicorikken.eu/blog/elizabeth-marincola-on-scientific-research/[Elizabeth Marincola on scientific research] 2014-09-08
+* link:http://nicorikken.eu/blog/educational-economics/[Educational economics] 2014-09-08
+* link:http://nicorikken.eu/blog/putting-your-knowledge-upstream/[Putting your knowledge upstream] 2014-09-08
+* link:http://nicorikken.eu/blog/the-smallest-valid-wikipedia-article/[The smallest valid Wikipedia article] 2014-09-06
+* link:http://nicorikken.eu/blog/the-lack-of-lens-mount-standards/[The lack of lens mount standards] 2014-08-27
+* link:http://nicorikken.eu/blog/truly-user-centered-design/[Truly user centered design] 2014-08-26
+* link:http://nicorikken.eu/blog/api-maturity-model/[API maturity model] 2014-08-25
+* link:http://nicorikken.eu/blog/great-insights-from-flock-2014/[Great insights from flock 2014] 2014-08-24
+* link:http://nicorikken.eu/blog/richard-stallman-reformatted/[Richard Stallman reformatted] 2014-08-23
+* link:http://nicorikken.eu/blog/keys-all-over-again/[Keys all over again] 2014-08-22
+* link:http://nicorikken.eu/blog/open-furniture/[Open furniture] 2014-08-20
+* link:http://nicorikken.eu/blog/eu-copyright-consultation/[EU copyright consultation] 2014-08-19
+* link:http://nicorikken.eu/blog/good-design/[Good design] 2014-08-19
+* link:http://nicorikken.eu/blog/bridging-the-smart-grid-gap/[Bridging the smart grid gap] 2014-08-19
+* link:http://nicorikken.eu/blog/down-the-path-with-emacs/[Down the path with Emacs] 2014-08-18
+* link:http://nicorikken.eu/blog/a-minimum-level-of-sharing-capabilities/[A minimum level of sharing capabilities] 2014-08-17
+* link:http://nicorikken.eu/blog/novena-laptop-as-an-open-source-booster/[Novena laptop as an open source booster] 2014-08-16
+* link:http://nicorikken.eu/blog/website-revamp/[Website revamp] 2014-08-16
