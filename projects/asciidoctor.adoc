@@ -21,6 +21,7 @@ Some of my desired features still need to be implemented using Asciidoctor nativ
 - [ ] Dedicated format for an article summary.
 - [ ] Automatic Atom feed generation, possibly by using the link:https://en.wikipedia.org/wiki/HAtom[hAtom] microformat in the HTML output.
 - [x] Replace `mailto:` links with small inline Javascript obfuscation code to prevent scrapers from reading the valid email addresses. _I've achieved this by link:https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/70[porting a similar Middleman extension]_.
+- [ ] Automatic generation of static redirect page (simple HTML with simple javascript) as link:https://github.com/jekyll/jekyll-redirect-from/blob/master/lib/jekyll-redirect-from/redirect_page.rb[available for Jekyll].
 
 == Asciidoctor plugin for Perun
 link:https://github.com/hashobject/perun[Perun] is a static site generator written in the link:http://clojure.org/[Clojure] programming language.
@@ -31,7 +32,8 @@ In it's current state the plugin is working, but it is not as pretty.
 
 If I where to do it over (and I've been prototyping some of it), I would make it more modular:
 
-. Wrap the link:https://github.com/asciidoctor/asciidoctorj/[Java port of Asciidoctor] in a Clojure library, with optional support for other plugins like link:https://github.com/asciidoctor/asciidoctor-diagram[Asciidoctor diagram]. _I have already done some of this work_
+. Wrap the link:https://github.com/asciidoctor/asciidoctorj/[Java port of Asciidoctor] in a Clojure library, with optional support for other plugins like link:https://github.com/asciidoctor/asciidoctor-diagram[Asciidoctor diagram]. +
+  _I have already done some of this work_
 . Extend the Clojure library with Perun oriented functionality like extracting metadata like author and date.
 . Call this Clojure library from Perun, which should now be relatively simple.
 . Improve Perun to use the new _send_ option for communicating between Boot pods, to work around the metadata content size restrictions.

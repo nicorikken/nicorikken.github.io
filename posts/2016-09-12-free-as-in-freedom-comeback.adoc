@@ -1,0 +1,32 @@
+= Free as in Freedom comeback
+:author:   Nico Rikken
+:revdate:  2016-09-12
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+.Free as in Freedom oggcast
+I listen to podcasts daily, when cycling to and from work, and when doing otherwise uninteresting tasks.
+One of my favourite podcasts on my link:https://gpodder.net/[gPodder] list is the Free as in Freedom 'oggcast'.
+I like this podcast with prominent Free Software advocates link:https://en.wikipedia.org/wiki/Karen_Sandler[Karen Sandler] and link:https://en.wikipedia.org/wiki/Bradley_M._Kuhn[Bradley Kuhn] mostly because they seem to be one of the only podcast to address the philosophical and legal side of Free Software in a welcoming but educated manner.
+I also like their oggcast because a new release is pretty rare. Sadly.
+
+.Comeback
+Als can be seen on the link:http://faif.us/cast/[back catalog] of the casts, the year 2015 was already low on releases, and 2016 was even worse. Too bad for us loyal listeners. *But the oggcast is making a comeback!* With the producer again available for editing, and with Karen and Bradley having resolved their scheduling issues, it is time to again start producing worthwhile content.
+
+.Licensing 101
+And so they do. Today I enjoyed the link:http://faif.us/cast/2016/sep/02/0x5C/[Licensing 101] oggcast from the to-be 'Basic FLOSS Concepts' series. I can strongly recommend everyone to listen to this oggcast. Thereby I also mean more educated community members, which can recite the summary of this oggcast to newcommers. For the newcommers important concepts are introduced:
+
+* What is copyright and how does it relate to software.
+* What has been the history regarding open source and free software and related licensing practices.
+* What is copyleft and how can different licenses be project on the axis of copyleft strength.
+* How business models and compliance relate to copyleft licenses.
+
+.Keeping it simple
+Throughout the podcast it is quite fun to hear Karen and Bradley unintentionally fall into the details and exceptions. They do cut it short in order not to confuse or put of newcommers, but a more educated community member might catch his mind drifting towards past news covering such exceptions.
+
+All in all great comeback. I can't wait to listen to the next cast of this series!
+
+nav::[]

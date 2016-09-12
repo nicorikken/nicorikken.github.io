@@ -7,6 +7,8 @@
 nav::[]
 
 .2016
+* <<2016-09-12-free-as-in-freedom-comeback.adoc#,Free as in Freedom comeback>> 2016-09-12
+* <<2016-08-23-offline-android-osm-mapping.adoc#,Offline Android OpenStreetMap mapping>> 2016-08-23
 * <<2016-08-02-static-site-with-separate-source-branch.adoc#,Static site with separate source branch>> 2016-08-02
 * <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>> 2016-08-01
 * <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>> 2016-07-21
@@ -44,7 +46,7 @@ nav::[]
 * <<2014-08-19-eu-copyright-consultation.adoc#,EU copyright consultation>> 2014-08-19
 * <<2014-08-19-good-design.adoc#,Good design>> 2014-08-19
 * <<2014-08-10-bridging-the-smart-grid-gap.adoc#,Bridging the smart grid gap>> 2014-08-19
-* link:http://nicorikken.eu/blog/down-the-path-with-emacs/[Down the path with Emacs] 2014-08-18
-* link:http://nicorikken.eu/blog/a-minimum-level-of-sharing-capabilities/[A minimum level of sharing capabilities] 2014-08-17
-* link:http://nicorikken.eu/blog/novena-laptop-as-an-open-source-booster/[Novena laptop as an open source booster] 2014-08-16
-* link:http://nicorikken.eu/blog/website-revamp/[Website revamp] 2014-08-16
+* <<2014-08-18-down-the-path-with-emacs.adoc#,Down the path with Emacs>> 2014-08-18
+* <<2014-08-17-a-minimum-level-of-sharing-capabilities.adoc#,A minimum level of sharing capabilities>> 2014-08-17
+* <<2014-08-16-novena-laptop-as-an-open-source-booster.adoc#,Novena laptop as an open source booster>> 2014-08-16
+* <<2014-08-16-website-revamp.adoc#,Website revamp>> 2014-08-16
