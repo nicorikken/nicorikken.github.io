@@ -1,0 +1,25 @@
+// --
+// tags: [Power Systems, Smart grid]
+// --
+= Bridging the smart grid gap
+:author:   Nico Rikken
+:revdate:  2014-08-19
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+In the industry and academics around power systems there is a lot of buzz around the link:https://en.wikipedia.org/wiki/Smart_grid[smart grid]. As the matter of fact, the smart grid has become the norm on which to base predictions and proposals. And despite all the marketing buzz, it is truly a great cause for engineers to pay attention to. The smart grid paradigm releases extensive engineering efforts and the supportive creativity and financial funds. The underlying motivation is however rarely questioned. Why even a smart grid? Does it have any significance?
+
+The mechanics of the grid operators are on the other hand mostly unmoved by all the buzz. They also hardly need to, since the core of the electrical grid still needs maintenance and expansion. Methods change and some additional measurement systems and control systems might have to be installed. Generally however not much has changed.
+
+So there is a gap, and during my graduation I often times cross this gap. A gap which is totally logical, once you see where both sides are coming from. The mechanics over the years have established a way of building a very reliable and quite optimal electrical grid. There wouldn’t be any direct harm in continuing in this fashion, making some minor adjustments to planning and management if needed. The other side of the spectrum is however looking at the frightening trend of distributed generation and the nearly unlimited possibilities of IT-systems.
+
+Even though these worlds are closing in on each other, they talk different languages. One side considers a lifetime of 10 years a maximum, whilst the other makes exploitation plans for 50 years ore more. One side sets out to build a highly reliable systems which will require the minimum of management, whilst the other side would like to automate all possible management tasks. One side doesn’t get scared of loads of wires, whilst the other side is cautious of adding even a single unnecessary conductor near a power system. One side would like to analyze information down to the microsecond, whilst the other side would only like to receive an indication if real action is needed. One side is concerned with the power systems in place, whilst the other is concerned with the procedures and management around it. Of course these examples are somewhat exaggerated, but as the matter of fact the backgrounds of both sides are very different.
+
+The real threat to the smart grid adoption is when the mechanics are overrun by the distributed generation and when the management and academics come up with impractical solutions for non-existing problems. It is the problem of not talking and not having the smart grid discussion.
+
+So at last there seems to be a reason not only for the smart grid, but more importantly for all its buzz.
+
+nav::[]

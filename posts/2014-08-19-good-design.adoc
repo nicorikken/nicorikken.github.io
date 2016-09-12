@@ -1,0 +1,29 @@
+// --
+// tags: [Digital freedom, privacy, security]
+// --
+= Good design
+:author:   Nico Rikken
+:revdate:  2014-08-19
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+In the 1970s industrial designer Dieter Rams famously wrote his link:https://en.wikipedia.org/wiki/Dieter_Rams#Dieter_Rams:_ten_principles_for_good_design[ten principles for good design] which is a powerful way of evaluating the quality of any product. Many methodologies exist on how best to design in order to achieve a certain kind of product, but I have yet to come across any other methodology on evaluating the end-product. In a way that final evaluation is all that matters, even though many companies can get away with tricking customers into buying lesser products. Setting a standard of good products will be a tremendous boost for overall wealth in the world, since this will most surely inspire others to strive for similar goals.
+
+The products by Apple are known to be adhering to these principles of good design, whether or not they intended it to. The way in which products adhere to these principles unfortunately can’t be measured quantitatively, making it also hard to define a ‘best’ product. This especially holds true because these principles aren’t in any way limited to industrial design. Just think about how Wikipedia has established not only their product but also their underlying mission making it so that now all these ten principles can considered met.
+
+== Privacy and security
+Considering how issues related to privacy and security map on these principles, I believe that principles 6, 8 and 9 call for the implementation of proper security and privacy, whilst principles 1, 2, 5 guide the right way of implementing privacy and security. This user-friendly approach of privacy and security has luckily been called upon in the community many times over.
+
+* The 6th principle ‘good design is honest’ calls for a product to clarify what security and privacy is given and also what isn’t. If say back-doors are purposely added to a product, this should be clear to the user. If on the other hand the product is as secure as possible, users should be informed what threats exist however unlikely.
+* The 8th principle ‘good design is thorough down to the last detail’ calls on designers (and engineers, which are also designers) to leave no aspects undecided, and therefore requires them to take a stance on matters like privacy and security.
+* The 9th principle ‘good design is environmentally friendly’ goes a long way of addressing all issues that are related to a product but also go way beyond the scope of a single product. The main argument here is the generalization principle of ‘what if all products were like that’, which calls on even the most limited product to respect the bigger picture. Examples included in the original principles are resource conservation, minimizing physical pollution and minimizing visual pollution. All of these examples of course hold for the complete product cycle, since this is needed to even grasp the bigger picture. Personally I’d like to believe that respecting privacy and security are part of this 9th principle, since if all product would violate privacy and security, a fearful society described in George Orwell’s book Nineteen Eighty-Four might become a reality. This is the referred bigger picture this principle adheres to.
+* The 1st principle ‘good design is innovative’ calls on designers to refrain from solely relying on ‘common standards’ and consider new innovations to be incorporated in their products. If everybody just keeps saying privacy and security are hard and leaves it at that, society will only deteriorate on this issue.
+* The 2nd principle ‘good design makes a product useful’ and the 5th principle ‘good design is unobtrusive’ emphasize the importance of not putting the burden of security and privacy on the users. Most users don’t like to fiddle with that and will mess things up eventually regardless of intention. These issues should be for the designer to solve, not for the user to worry about.
+
+== Conclusion
+These powerful principles might some times seem to be in conflict with each other and often times products are designed for short-term gains despite best intentions. It is however up to involved designers to improve the products and make the hard compromises required, not only to suit target customers but to suit society as a whole. This holds for privacy and security just as it holds for aesthetics and sustainability. Designers have to power to shape our world and with great power comes great responsibility.
+
+nav::[]

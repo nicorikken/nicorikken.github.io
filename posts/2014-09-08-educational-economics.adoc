@@ -1,0 +1,23 @@
+// --
+// tags: [Information]
+// --
+= Educational economics
+:author:   Nico Rikken
+:revdate:  2014-09-08
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+Thinking about the brave new world of free education based on freely available information and educational programs, it became clear to me that there is a specific kind of economics to education. The basic time-tested principle of education is the chronological process of starting a suitable education, passing a cycle of learning and testing, passing the final test, getting the degree and finally enjoying the benefits it gives, and in some cases a  renewal process needs to be followed indefinitely. In practice this scheme is strongly effectuated by the public opinion which generally favors a degree over a loose education, and the fact that most educational programs are very structured and regulated by various authorities. To put it in economic terms, this scheme leads people from an educational mortgage to educational rental.
+
+This scheme is contrary to how most people finance their houses, for which most people start out renting due to lack of money and needing the flexibility. If life has settled, a mortgage is a more logical step since it reduces unnecessary expanses on the long-term. So how about this principle of education? The bulk of the learning starts out as a mortgage, where a commitment is given to complete a certain educational program and only if you can deliver your promise the corresponding degree will be given, which holds the ultimate value like a house would. If you however fail to deliver, you would still have enjoyed the education (the living) but you would not end up owning the degree (the house). After obtaining a degree, an upkeep is needed to keep knowledge up-to-date and it might even be mandatory by way of taking regular tests or programs. So having gained the degree would leave you learning (paying rent) many times over.
+
+Considering that we can only learn so much and that our time spent on education is rather limited, we have to either limit our educational commitments or rethink this paradigm. Let’s start with the first option: what if we would only learn what we really needed? That seems to be something which is contrary to our current process, since the young brain is fed a large amount of generic knowledge and since this knowledge predetermines the available options for work, the main decisions are already made in some regard. We could however ‘start with the end in mind’ and from the start focus our education in the direction we desire, and make it so that we prioritize depth over broadness, in order to reduce upkeep levels. This is again is contrary to current practice. In addition shifts in our preferences would have to be instantly translated into shifts in education.
+
+This leads us to the second possibility of rethinking the paradigm. What if our culture would strongly value gained knowledge over gained degrees and would have people learning by doing in order to speed up the evaluation-cycle of preferences in work leading to desire for educational topics. This would imply a world of education concerning small incremental educational steps of complete topics which also cover the necessary additional information to understand the main information, rather than putting that information into a different course. It should be clear how certain topic relate to each other, in order to make thoughtful decisions on the next education steps.
+
+This flexible way of educating would require a different student mindset, a different kind of study material and a different kind of degree valuation, but I’d like to think that with the aid of technology this is not only a possibility, but this will also become reality.
+
+nav::[]

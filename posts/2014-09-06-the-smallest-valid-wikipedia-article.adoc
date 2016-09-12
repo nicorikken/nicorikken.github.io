@@ -1,0 +1,15 @@
+// --
+// tags:[Information]
+// --
+= The smallest valid Wikipedia article
+:author:   Nico Rikken
+:revdate:  2014-09-06
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+Lately I’ve often wondered whether I should contribute my newly learned knowledge to Wikipedia by creating a dedicated article. Creating decent articles is however a lengthy and quite a time-consuming process. So how about setting a mental note by creating the planned article page and only contributing the most basic of information, with the intent of improving it later on. This begs the question is such a strategy can be considered good practice. Fortunately I found a link:https://en.wikipedia.org/wiki/Wikipedia:Stub[Wikipedia page] going in further detail on the definition of a ‘stub’, which basically is a short article of which the value can be questioned. A key point for me to take away from this article is the fact that link:https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_is_not_a_dictionary[Wikipedia is not a dictionary]. This come down to the key distinction that a dictionary is about the word(s), whilst Wikipedia is about the subject. So in order to start a new article in a rightly fashion, some decent work will have to be done in advance.
+
+nav::[]

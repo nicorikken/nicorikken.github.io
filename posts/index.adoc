@@ -26,24 +26,24 @@ nav::[]
 * <<2014-12-24-ieee-open-source-software-task-force.adoc#,IEEE Open Source Software Task Force>> 2014-12-24
 * <<2014-11-21-the-fun-of-free-software.adoc#,The fun of free software>> 2014-11-21
 * <<2014-11-07-why-eoma68-will-advance-both-free-software-and-free-hardware.adoc#,Why EOMA68 will advance both free software and free hardware>> 2014-11-07
-* link:http://nicorikken.eu/blog/circumventing-google-on-mobile/[Circumventing Google on mobile] 2014-11-03
-* link:http://nicorikken.eu/blog/scalability-of-higher-laws/[Scalability of higher laws] 2014-09-19
-* link:http://nicorikken.eu/blog/a-concrete-life-purpose/[A concrete life purpose] 2014-09-18
-* link:http://nicorikken.eu/blog/its-just-technology/[It's just technology] 2014-09-14
-* link:http://nicorikken.eu/blog/elizabeth-marincola-on-scientific-research/[Elizabeth Marincola on scientific research] 2014-09-08
-* link:http://nicorikken.eu/blog/educational-economics/[Educational economics] 2014-09-08
-* link:http://nicorikken.eu/blog/putting-your-knowledge-upstream/[Putting your knowledge upstream] 2014-09-08
-* link:http://nicorikken.eu/blog/the-smallest-valid-wikipedia-article/[The smallest valid Wikipedia article] 2014-09-06
-* link:http://nicorikken.eu/blog/the-lack-of-lens-mount-standards/[The lack of lens mount standards] 2014-08-27
-* link:http://nicorikken.eu/blog/truly-user-centered-design/[Truly user centered design] 2014-08-26
-* link:http://nicorikken.eu/blog/api-maturity-model/[API maturity model] 2014-08-25
-* link:http://nicorikken.eu/blog/great-insights-from-flock-2014/[Great insights from flock 2014] 2014-08-24
-* link:http://nicorikken.eu/blog/richard-stallman-reformatted/[Richard Stallman reformatted] 2014-08-23
-* link:http://nicorikken.eu/blog/keys-all-over-again/[Keys all over again] 2014-08-22
-* link:http://nicorikken.eu/blog/open-furniture/[Open furniture] 2014-08-20
-* link:http://nicorikken.eu/blog/eu-copyright-consultation/[EU copyright consultation] 2014-08-19
-* link:http://nicorikken.eu/blog/good-design/[Good design] 2014-08-19
-* link:http://nicorikken.eu/blog/bridging-the-smart-grid-gap/[Bridging the smart grid gap] 2014-08-19
+* <<2014-11-03-circumventing-google-on-mobile.adoc#,Circumventing Google on mobile>> 2014-11-03
+* <<2014-09-19-scalability-of-higher-laws.adoc#,Scalability of higher laws>> 2014-09-19
+* <<2014-09-18-a-concrete-life-purpose.adoc#,A concrete life purpose>> 2014-09-18
+* <<2014-09-14-its-just-technology.adoc#,It's just technology>> 2014-09-14
+* <<2014-09-08-elizabeth-marincola-on-scientific-research.adoc#,Elizabeth Marincola on scientific research>> 2014-09-08
+* <<2014-09-08-educational-economics.adoc#,Educational economics>> 2014-09-08
+* <<2014-09-08-putting-your-knowledge-upstream.adoc#,Putting your knowledge upstream>> 2014-09-08
+* <<2014-09-06-the-smallest-valid-wikipedia-article.adoc#,The smallest valid Wikipedia article>> 2014-09-06
+* <<2014-08-27-the-lack-of-lens-mount-standards.adoc#,The lack of lens mount standards>> 2014-08-27
+* <<2014-08-26-truly-user-centered-design.adoc#,Truly user centered design>> 2014-08-26
+* <<2014-08-25-api-maturity-model.adoc#,API maturity model>> 2014-08-25
+* <<2014-08-24-great-insights-from-flock-2014.adoc#,Great insights from flock 2014>> 2014-08-24
+* <<2014-08-23-richard-stallman-reformatted.adoc#,Richard Stallman reformatted>> 2014-08-23
+* <<2014-08-22-keys-all-over-again.adoc#,Keys all over again>> 2014-08-22
+* <<2014-08-20-open-furniture.adoc#,Open furniture>> 2014-08-20
+* <<2014-08-19-eu-copyright-consultation.adoc#,EU copyright consultation>> 2014-08-19
+* <<2014-08-19-good-design.adoc#,Good design>> 2014-08-19
+* <<2014-08-10-bridging-the-smart-grid-gap.adoc#,Bridging the smart grid gap>> 2014-08-19
 * link:http://nicorikken.eu/blog/down-the-path-with-emacs/[Down the path with Emacs] 2014-08-18
 * link:http://nicorikken.eu/blog/a-minimum-level-of-sharing-capabilities/[A minimum level of sharing capabilities] 2014-08-17
 * link:http://nicorikken.eu/blog/novena-laptop-as-an-open-source-booster/[Novena laptop as an open source booster] 2014-08-16

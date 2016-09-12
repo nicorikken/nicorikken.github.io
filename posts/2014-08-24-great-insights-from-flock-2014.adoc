@@ -1,0 +1,42 @@
+// --
+// tags: [Digital freedom, Free software, Privacy, Security]
+// --
+= Great insights from Flock 2014
+:author:   Nico Rikken
+:revdate:  2014-08-24
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+This month the link:http://flocktofedora.com/[Fedora Flock] conference was held in Prague. Even though I haven’t used Fedora in a while now, the conference was interesting to me because of other topics discussed. I already link:http://nicorikken.eu/blog/novena-laptop-as-an-open-source-booster/[reported] on the link:https://www.youtube.com/watch?v=qzGEBJLlUIc[Novena presentation], but below I’ve listed other presentations.
+
+== Free And Open Source Software In Europe: Policies And Implementations – Gijs Hillenius
+This link:https://www.youtube.com/watch?v=biQ0ECgkJo0[presentation] gives a nice overview of various initiatives around free software and how well organizations transition towards free software. The statement about the mayor of Munich has unfortunately been multiplied by the Linux press, but coming from this presentation it seems that the transition is properly locked into processes and there won’t be a change of plans any time soon. Gijs also gave other great examples of free software being used, of which the link:https://en.wikipedia.org/wiki/Gendarmarie[Gendarmerie] struck me by scale and determination. Of course the main issue in Europe related to this topic is the reluctance of the European Commission of even considering free software, which is covered by Gijs as well.
+
+== Building an application installer from the ground up – Richard Hughes
+The link:https://www.youtube.com/watch?v=mSWIodEQMqo[presentation] give a nice overview of the process of solving the know problem of making legacy systems compatible with the new system. Basic considerations were how to deal with local and remote information storage and how to deal with fonts, plugins and terminal commands. I believe the team did a great job by keeping a local focus (including search), incorporating development efforts in the ranking, refraining from including all terminal commands in the software center (which would totally clutter the interface) and supplying content for the premium applications. This will help make software center a premium tool which will not only aid casual users, but will also be a powerful tool for power-users as well.
+
+== Better Presentation of fonts in Fedora – Pravin Satpute
+Overall I didn’t find this link:https://www.youtube.com/watch?v=pdR3vi2-Ths[presentation] a strong one. It made me aware of a new fact, namely that developers are able to choose their own fonts, regardless of fonts included in the distribution or supplied by the user. However I’m not quire sure if Pravin maybe meant that developers aren’t able to develop for a specific set of fonts, because that is decided later on by the selected theme and the font settings. Halfway down the presentation a small discussion about the font feature in the new software center, where a main question arose on grouping fonts and how to deal with example texts. These questions however remain unanswered. Pravin provided a link to his link:http://osfw-i18n.rhcloud.com/[font portal] which seems to be aimed at providing additional features like comments and character support views on top of a concept like the link:http://openfontlibrary.org/[Open Font Library]. The key point I took away from this presentation is that work is needed on creating a generic overview covering the font characteristics, the character support, license information, readability, and possibly user reviews.
+
+== GNOME: a content application update – Debarshi Ray
+This link:https://www.youtube.com/watch?v=MVrl0Cs1NRM[presentation] gives a great overview of the effort of link:http://www.gnome.org/[GNOME] to come up with a set of applications to link:https://wiki.gnome.org/Design/Whiteboards/FindingAndReminding[manage content], much in the same way link:https://en.wikipedia.org/wiki/Adobe_Bridge[Adobe Bridge] has introduced the concept a while ago for the Adobe Creative Suite. It is not about viewing or editing and it is not about the files, it is about the content from various sources and managing it. One of the powerful concept explicitly highlighted is the ‘reversible delete’ so that rather than explicitly asking for confirmation, you can undo an accidental deletion. Furthermore secondary click (right click) have been removed to better suit touchscreen controls. Debarshi also gives a hint of things to come concerning sharing via various sharing points, managed in the settings dialog. The mock-up shown also shows regular applications like GIMP and Inkscape to be covered by this concept of sharing points, which seems odd but would help to unify the management concept.
+
+== How Is the Fedora Kernel Different – Levente Kurusa
+This link:https://www.youtube.com/watch?v=O4vj_hyLok0[presentation] was beyond my state of knowledge about kernels and the Linux kernel in particular. It did however highlight how the Linux kernel can be tweaked to meet different needs and how different distributions make different decisions on these settings. In general however I would believe most users would never be able to distinguish these kernels, just like I wouldn’t. I’d be more struck by decisions on a higher level like the default desktop environment and the package manager.
+
+== Procrastination makes you better – Life of a remotee – Flavio Percoco
+This link:https://www.youtube.com/watch?v=Ux5dRX_9bj0[presentation] gave a brief and humorous overview on the struggles of working remotely, covering some tips on improving your working life. It is strong in the sense that it was a very personal story, relating to many remote workers, although it only has limited pointers to other material on dealing with working remotely.
+
+== UEFI – The Great Satan and you – Adam Williamson
+This was a very explanatory link:https://www.youtube.com/watch?v=TmoeEM_eCQo[presentation] covering both the technology of link:https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface[UEFI] and link:https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_boot[Secure boot] and the practical implications. Since I have no experience with a machine featuring UEFI, I didn’t have any idea about how much of a pain dealing with UEFI and Secure boot would be. It seems this very much depends on the machine being used, although best-practices exist. Also it clarified the controversy around Secure boot, since basically other keys apart from Microsoft could have been included, but unfortunately no other party was willing to take on the job. Surely a presentation worth recommending.
+
+== UX 101 – Practical usability methods that everyone can use – Karen T.
+I found this link:https://www.youtube.com/watch?v=5D_HZo_cCcQ[presentation] be a great one, coming clearly from a design-side rather than a development side. The presentation gives a concise overview of achieving a great interface, which is great to watch again before taking on a new project involving design. I believe anyone involved in user interfaces can learn from this overview.
+
+== Yubikeys – Nick Bebout
+This link:https://www.youtube.com/watch?v=GakryhT12_k[presentation] covers the Yubikeys by link:http://www.yubico.com/[Yubico], which can be used for link:https://en.wikipedia.org/wiki/Two_factor_authentication[two-factor authentication]. The newer model called the Yubikey Neo also features the possibility of hardware-based PGP. The presentation covered some aspects specifically targeted for Fedora users, but it did a decent covering of the features of Yubikey and even of smart-cards. Including a demo, this presentation offers plenty of pointers to delve into the various aspects of key management and two-factor authentication.
+
+nav::[]

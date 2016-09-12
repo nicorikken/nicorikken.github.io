@@ -1,0 +1,17 @@
+// --
+// tags: [Information]
+// --
+= Putting your knowledge upstream
+:author:   Nico Rikken
+:revdate:  2014-09-08
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+The concept of link:https://en.wikipedia.org/wiki/Upstream_%28software_development%29[upstream] commits is well known in the world of free software, since it is a very effective way of having others expand on your personal contributes, keeping it up-to-date and improving the quality. I propose to use this same principle on general knowledge as well. Consider just how many books and notebooks each of us have in order to keep track of our personally gained knowledge. In most cases this knowledge is very specific since it concerns our professional occupation, which is only one of many diverse occupations. This way of working is actually rather wasteful: information will be lost once the owners of certain information will dismiss it, information will only ever be available in those forms thereby making it hard for others to gather the same information, and the process of gaining information requires others to basically start from scratch.
+
+Taking the generic part of your personal information and putting it upstream will help to solve this loop of waste and build a freely available set of information which can easily be improved upon. If nobody can add to it, it will remain static but if people can your information can be put into context and be improved upon. Taking this to a radial level would basically mean that sites like Wikipedia become your notepad. Of course this would require a different kind of note taking concerning proper phrasing and referencing. Also it wouldn’t be as easy to relate information to your other information as long as these ties are generally relevant as well. The only valid exception for this strategy I can think of it confidential information.
+
+nav::[]
