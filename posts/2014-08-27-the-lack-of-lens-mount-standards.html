@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Nico Rikken">
-<title>Confronting your digital self</title>
+<title>The lack of lens mount standards</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -850,22 +850,47 @@ padding-bottom: 10px;
 </head>
 <body class="article">
 <div id="header">
-<h1>Confronting your digital self</h1>
+<h1>The lack of lens mount standards</h1>
 <div class="details">
 <span id="author" class="author">Nico Rikken</span><br>
-<span id="revdate">2015-02-14</span>
+<span id="revdate">2014-08-27</span>
 </div>
 </div>
 <div id="content">
 <div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 <div class="paragraph">
-<p>July last year I’ve deleted my Facebook account, but not just by deactivating my account, but by removing each and every post, tag and like. This was a head on confrontation with my digital self. The little information I believed to have submitted proved to be an overwhelming pile of data with serious privacy implications. This wasn’t just a rigorous action, it was a treatment teaching me about privacy. Being convinced I would be one of the few crazy enough to make the effort of deleting the individual scraps of information, I was surprised to find out that some of my friends did exactly the same thing. And more importantly, they had a similar mind-boggling experience. What if there would be a tools continually reminding you about the information you have shared, in statistics as well as by highlighting some of that information? Giving this feedback would certainly help to make people more privacy-aware, the initial step towards a better common practice.</p>
+<p>Ever since I started orienting on buying my current <a href="https://en.wikipedia.org/wiki/Mirrorless_interchangeable-lens_camera">mirrorless camera</a>, I have been amazed at how many different lens mounts are available. A reason for deciding on a my current PEN EP-1 is the fact that it uses the <a href="https://en.wikipedia.org/wiki/Micro_Four_Thirds_System">Micro Four Thirds system</a>, which is currently supported by a <a href="https://en.wikipedia.org/wiki/Micro_Four_Thirds_System#Micro_Four_Thirds_system_cameras">multitude of vendors</a>, in contrary to most other lens mounts. In addition the short <a href="https://en.wikipedia.org/wiki/Flange_focal_distance">flange focal distance</a> allows many other types of lenses to be mounted by using adapters. On the contrary, the lens mounts of well-established brands like Nikon and Canon are only available on their specific camera bodies, but accept lenses from third party manufacturers like <a href="https://en.wikipedia.org/wiki/Sigma_Corporation">Sigma</a> or <a href="https://en.wikipedia.org/wiki/Tamron">Tamron</a> which make their lenses available for most types of mounts. The fact that these different mounts exist is however not without reason.</p>
+</div>
+<div class="paragraph">
+<p>As the matter of fact, the topic of lens mounts is a very interesting one. The interface can be defined in two dimensions, namely the physical dimension and the electronic dimension covering the communication protocol. The physical dimension is defined by the flange focal distance (partly defined by the option of using a mirror), the locking mechanism, the ring diameter, the film or sensor size, the electronic contact positioning and the optional lens motor gear. The electronic dimension is defined by the power and information that needs to be exchanged between the lens and the camera. This in turn depends on whether different camera features are built into the camera or in the lens. Optical <a href="https://en.wikipedia.org/wiki/Image_stabilization">image stabilization</a> can be implemented in the camera body or in the camera lens, the type of motor can vary, the focusing actuation will depend on the type of autofocus used (contrast or phase-detection), not all lenses would be able to zoom, focus might be done via the camera by focus-by-wire rather than a direct manual focus on the lens and some lenses might feature no motor at all (full manual). Building a system which suits all use-cases would however be very cumbersome ans would consist of many compromises. Digital Photography Review sheds a light on this aspect in their <a href="https://www.dpreview.com/reviews/olympus-om-d-e-m1/7">review of the Olympus OM-D EM-1</a>, which was the first camera in the Micro Four Thirds system to feature <a href="https://en.wikipedia.org/wiki/Autofocus#Phase_detection">phase detection</a>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>The key difference between contrast-detection autofocus (as generally used in compacts and mirrorless cameras), and phase detection (as traditionally used in DSLRs) is that phase detection is able to assess how out-of-focus the image is, and determine directly how far and in what direction the lens needs to move its focus group to achieve a sharp image. Contrast detection has to scan through at least part of its focus range to find the point of optimal focus.</p>
+</div>
+<div class="paragraph">
+<p>This difference totally changes to the way lenses need to be designed – those optimised for phase detection need to be able to race to a specified location very quickly, whereas contrast detection lenses need to be able to scan back and forth very quickly. Traditionally, very few lenses designed for phase detection have coped very well with the subtle, scanning motion required for contrast detection. Those designed for Four Thirds SLRs could autofocus on previous Micro Four Thirds cameras, but only slowly and hesitantly.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Wikipedia. Autofocus
+</div>
+</div>
+<div class="paragraph">
+<p>Since this the phase-detection would require a different lens-construction, it is only of use when using phase-detection lenses. So in order to facilitate both types of autofocus and the corresponding types of lenses, a hybrid sensor should be used. Optical image stabilization could be optional on both the body and the lens like in the Micro Four Thirds system Olympus has placed stabilization in the camera body whilst Panasonic has placed stabilization in the lens body. This however implies that combing a Panasonic body with a Olympus lens would give you no optical stabilization, whilst an Olympus body with a Panasonic lens would give you two options of stabilization, requiring the photographer to disable one of the two. Then there also exist the differences in lnik:https://en.wikipedia.org/wiki/Image_sensor_format[sensor size] and consequent lens diameter in order to let in plenty of light.</p>
+</div>
+<div class="paragraph">
+<p>An area yet untouched is the legacy of lenses. For example Nikon is famous for withstanding the temptation of changing the mounting when electronics where implemented, in contrast to Canon. This leave the <a href="https://en.wikipedia.org/wiki/F-mount">F-mount</a> as a well-supported format, although of course some variants exist due to the various electronic systems which came into being over time. Basically Nikon showed the clear distinction between the mechanical and electronic dimension described earlier, by making the electronic adapt to the physical system, rather than redefining both. By their move to the <a href="https://en.wikipedia.org/wiki/EF_mount">EF-mount</a>, Canon destined a large set of lenses to be abandoned in time. Dealing with legacy-features is a whole different debate.</p>
+</div>
+<div class="paragraph">
+<p>So in conclusion, even apart from all financial motivations for creating a lock-in with a certain lens mount and adopting new mounts, there are many dependencies about a lens mount. I believe that in the present day Micro Four Thirds has a leg up by setting a broad standard and making it relatively easy to allow fitting of lenses with different mountings. However then again it is yet another new standard, leading to further diversification rather than to convergence. Either way, I set my mind on supporting the Micro Four Thirds crusade and hoping that the standard might expand to suit other types of electronic operation (since the mechanical design is set) in order to become the unified standard I believe is needed.</p>
 </div>
 <div id ="toc-nav"><div id="toc-nav-item"><a href="../index.html#" title="home"><i class="fa fa-home" aria-hidden="true"></i></a></div><div id="toc-nav-item"><a href="index.html#" title="posts"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div></div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-09-11 23:27:45 CEST
+Last updated 2016-09-12 07:51:02 CEST
 </div>
 </div>
 <script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>
