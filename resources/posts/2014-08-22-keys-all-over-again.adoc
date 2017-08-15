@@ -1,0 +1,17 @@
+---
+tags: [Digital freedom, Security]
+---
+= Keys all over again
+:author:   Nico Rikken
+:revdate:  2014-08-22
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+I just updated my link:https://en.wikipedia.org/wiki/GNU_Privacy_Guard[GnuPG] encryption by generating a new key-pair from scratch. Contrary to the last time I took care in keeping my main key private and explicitly using subkeys to be used for signing and decrypting. Even though a common practice has been established, it is quite a challenge to understand the different options and the way in which different configurations might be better or worse. I took some advice by looking at the GNU link:https://www.gnupg.org/gph/en/manual.html[Privacy Handbook], a recent link:http://blog.josefsson.org/2014/06/23/offline-gnupg-master-key-and-subkeys-on-yubikey-neo-smartcard/[post] by Stephen Josefsson, A Riseup link:https://help.riseup.net/en/security/message-security/openpgp/best-practices[article] on best practices, a link:https://gist.github.com/chrisroos/1205934[list of instructions] on strictly working with a live OS, and an outdated link:http://www.cryptnet.net/fdp/crypto/keysigning_party/en/keysigning_party.html[manual] for keysigning parties. Strictly signing offline feels like a hassle, but I’m sure I will get by.
+
+One of the intended improvements I wasn’t able to work out, was using different passwords for my subkeys. I found an link:http://gnupg.10057.n7.nabble.com/Different-passwords-for-subkeys-td37210.html[email] on the GnuPG user mailinglist, but these instructions didn’t make it happen. This therefore remains to be worked out. The article of Stephen Josefsson also triggered some thoughts on more advanced configurations, by using a picture and refraining from using 64-bit based key-sizes. So there are still some ways of improving the quality of the configuration, although at the very least this change was a step in the right direction.
+
+nav::[]

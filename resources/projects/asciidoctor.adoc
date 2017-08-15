@@ -1,0 +1,52 @@
+---
+---
+= Asciidoctor
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up: <<index.adoc#,projects>>
+
+nav::[]
+
+I got started with Asciidoc when we adopted it at work, because of the more advanced featured compared to Markdown.
+Soon after I did my link:https://github.com/hashobject/perun/pull/50[first Clojure project], by prototyping Asciidoctor support in the Perun static site generator.
+Meanwhile I have gained experience with, and contributed to, Asciidoctor in a multitude of ways.
+
+== Asciidoctor based blog
+This page you are looking at, is as much plain Asciidoc as possible.
+As the matter of fact, that is what I consider the challenge.
+Some of my desired features still need to be implemented using Asciidoctor native tools like link:https://github.com/asciidoctor/asciidoctor-extensions-lab/[extensions].
+
+.Desired features
+- [ ] Generic header bar, if only with the page title, also to easily return to the home page.
+- [x] Navigation between pages using icons.
+      _A decent attempt can be found in my link:https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/67[toc-nav PR]_.
+- [ ] Dedicated format for an article summary.
+- [ ] Automatic Atom feed generation, possibly by using the link:https://en.wikipedia.org/wiki/HAtom[hAtom] microformat in the HTML output.
+- [x] Replace `mailto:` links with small inline Javascript obfuscation code to prevent scrapers from reading the valid email addresses. _I've achieved this by link:https://github.com/asciidoctor/asciidoctor-extensions-lab/pull/70[porting a similar Middleman extension]_.
+- [ ] Automatic generation of static redirect page (simple HTML with simple javascript) as link:https://github.com/jekyll/jekyll-redirect-from/blob/master/lib/jekyll-redirect-from/redirect_page.rb[available for Jekyll].
+
+== Asciidoctor plugin for Perun
+link:https://github.com/hashobject/perun[Perun] is a static site generator written in the link:http://clojure.org/[Clojure] programming language.
+It has Markdown support out of the box, but I've written a prototype of an link:https://github.com/hashobject/perun/issues/49[Asciidoctor plugin] for it.
+As the output content was embedded in the Clojure metadata, and there were some practical limitations on the maximum metadata size, at the time a file-base integration _hack_ was needed to enable proper support.
+Also the custom JRuby integration could be avoided by relying on the community-supported Java port of Asciidoctor.
+In it's current state the plugin is working, but it is not as pretty.
+
+If I where to do it over (and I've been prototyping some of it), I would make it more modular:
+
+. Wrap the link:https://github.com/asciidoctor/asciidoctorj/[Java port of Asciidoctor] in a Clojure library, with optional support for other plugins like link:https://github.com/asciidoctor/asciidoctor-diagram[Asciidoctor diagram]. +
+  _I have already done some of this work_
+. Extend the Clojure library with Perun oriented functionality like extracting metadata like author and date.
+. Call this Clojure library from Perun, which should now be relatively simple.
+. Improve Perun to use the new _send_ option for communicating between Boot pods, to work around the metadata content size restrictions.
+
+== Asciidoctor extensions
+Apart from the desired functionality mentioned in the <<Asciidoctor based blog>> section, I'd like to see other functionality come into reality as well.
+
+=== Support for editorial markup and notes
+As mentioned in a dedicated link:https://github.com/asciidoctor/asciidoctor/issues/1031[GitHub issue].
+Rather than directly using the syntax of the link:http://criticmarkup.com/[criticmarkup project] it makes more sense to me to use an inline macro syntax.
+It could have similar properties as the quote macro has.
+Then in addition the criticmarkup could be supported, by parsing the Asciidoc source in the extension.
+
+nav::[]

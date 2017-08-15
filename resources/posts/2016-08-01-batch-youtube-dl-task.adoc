@@ -1,0 +1,78 @@
+---
+---
+= Batch YouTube-dl task
+:author:   Nico Rikken
+:revdate:  2016-08-01
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+:nav-prev: <<2016-07-21-starting-a-blog-in-asciidoc.adoc#,Starting a blog in asciidoc>>
+:nav-next: <<2016-08-02-static-site-with-separate-source-branch.adoc#,Static site with separate source branch>>
+
+nav::[]
+
+== YouTube music
+There is just so many music available to people on YouTube, it's amazing.
+And with the advanced screening and copyright infringement reporting policies, as a user you can rest assured that the music on YouTube is available for you on purpose.
+
+To utilize this music availability, I use link:http://yt-dl.org/[YouTube-dl].
+YouTube-dl is a tool that allows you to (batch) search, select, download and convert video's.
+The tool itself is not constrained to the use-case of YouTube, but that is just the provider this posts focuses on.
+
+== Commandline power
+This is the command I've been using thus far for `youtube-dl` to download multiple tracks based on the `tracksearch.txt` file.
+
+.youtube-dl command
+[source, bash]
+----
+$ youtube-dl --default-search ytsearch2: -a tracksearch.txt --max-filesize 10M --min-views 1000 -f bestaudio -x --audio-format mp3 --audio-quality 192
+----
+
+.tracksearch.txt
+[source, txt]
+----
+lee rosevere - earthmover
+brad sucks - making me nervous
+----
+
+=== Breaking it down
+
+.Search
+[cols="1,3"]
+|===
+|`--default-search ytsearch2:` |search via YouTube, and return 2 video's, to have 1 failover if selectors `--max-filesize` and `--min-views` fail.
+|`-a tracksearch.txt`          |use the lines of the `tracksearch.txt` as a starting point.
+|===
+
+.Selection
+[cols="1,3"]
+|===
+|`--max-filesize 10M` |Ignore found video's with a file-size larger than 10Mb (video-file), which are likely to be full albums rather than single tracks.
+|`--min-views 1000`   |Ignore found video's with a view count under 1000, to prevent downloading bad uploads.
+|===
+
+.Download
+[cols="1,3"]
+|===
+|`-f bestaudio` |Download the video format with the best audio format, as we're going for audio only in this case.
+|===
+
+.Conversion
+[cols="1,3"]
+|===
+|`-x`                  |Extract audio from the downloaded video.
+|`--audio-format mp3`  |Convert to mp3 file format. _I've chosen `mp3` for playback compatibility, but the open standard `ogg` format can be selected as well, which has better audio quality performance as an added benefit._
+|`--audio-quality 192` |Convert to audio quality of 192kbps, good enough for this use-case.
+|===
+
+== Room for improvement
+Now if multiple video's (2 for this case) pass the viewcount and filesize selectors, all videos will be downloaded and converted.
+Ideally only 'the best' video will be downloaded.
+Likewise, appending the `--get-duration` option to the command will show the duration for the video, to ensure the downloaded song will not be too short or too long of a duration.
+
+== A free music alternative
+Although this solution works well for several use-cases, I want to use this post to direct you to the link:http://freemusicarchive.org/[Free Music Archive], a curated selection of free (as in freedom) music.
+A lot of music is actually `CC-NC`, so NonCommercial usage allowed, but let this not ruin your party.
+There are a lot of great artists on this platform, and there are several ways the platform supports discoverability of this great music.
+
+nav::[]

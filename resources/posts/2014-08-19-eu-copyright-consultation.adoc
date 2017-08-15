@@ -1,0 +1,33 @@
+---
+tags: [Digital freedom]
+---
+= EU copyright consultation
+:author:   Nico Rikken
+:revdate:  2014-08-19
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+A while back a report was link:http://ec.europa.eu/internal_market/consultations/2013/copyright-rules/[published] on the responses given on the EU copyright consultation. Despite the length of the document (101 pages) it is very readable and as the matter of fact it gives a decent overview of the different viewpoint involved in this issue. I’ve given some highlights below.
+
+Institutional users on the terms of protection, making the case that in most cases the copyright is exhausted at the end of the copyright term:
+
+[quote]
+____
+Institutional users generally believe that the current terms are inappropriate and should be shortened. … They point out that in many cases, the costs of the digitisation of copyright protected works that are no longer commercially exploited exceeds the potential economic value of these works.
+____
+
+Some of the authors and performance reacting on the same issue apparently don’t seem to get that the copyright is defined to extend to a set period after death of the author:
+
+[quote]
+____
+The vast majority of authors and performers consider that the term of protection currently set out in EU law is appropriate and should not be shortened. However, some respondents in these categories favour a longer term of protection, which, they say, would better reflect longer life expectancy.
+____
+
+I was glad to see notice of disabilities in the section on copyright exceptions, although I would assume the real questions arise when third party service providers aid in transforming content to digital or audible form. Furthermore it struck me that there seems to be a lack of agreement amongst member states on about all of the issues. This would therefore further complicate the process of copyright reform and unification, resulting in the continuation of the status quo. An issue I wasn’t quite aware of, is that event though an exception exists for educational institution, this often times results in problems when courses are made available to an outside audience. This issue therefore hinders the adoption of new ways of teaching. At the minimum a clear stance should be taken about such cases. As a student it is painful to see end users argue for access of scientific articles without needing to go through all the paywalls which have been put up by the various journals. Staying on top of recent development is however important to all professionals in academics, probably to anyone studying, and therefore also to society as a whole. Limiting the flow of the information our modern society has been built upon can therefore be considered very coercive.
+
+After reading through the document I would summarize that on the one hand the authors, management organizations and publishes are quite satisfied with the way the system is set-up, whilst the end users desire more freedom and increase clarity. A large part of these end users however seem to acknowledge the fact that copyright should be kept in order to keep the system going. So does this mean that copyright in its current form isn’t serving society they way it was intended originally?
+
+nav::[]

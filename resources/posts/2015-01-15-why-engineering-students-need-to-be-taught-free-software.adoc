@@ -1,0 +1,25 @@
+---
+tags: [Education, Free Software]
+---
+= Why engineering students need to be taught free software
+:author:   Nico Rikken
+:revdate:  2015-01-15
+:navicons:
+:nav-home: <<../index.adoc#,home>>
+:nav-up:   <<index.adoc#,posts>>
+
+nav::[]
+
+At a power systems symposium today I met some of my previous classmates of the technical university, now in the starting phase of their engineering career. My viewpoint on the need for free software in education was once again confirmed. Whilst at the university many advanced software packages are provided to students at negligible cost, at work these same tools are hard to obtain. In practice these software packages are too expensive to be used on just a couple of cases, let alone ‘try out’ to find a use case. This basically leave the choice between misusing unsuitable packages or not taking on the task in the first place, both of which are generally undesirable.
+
+As I have learned, and my classmates are learning as well, as an engineering professional you are in need for software with no strings attached: free software. Engineers are taught to overcome many hurdles by grasping the problem and coming up with a right approach for solving the problem at hand. Restricting the set of these possible approaches by restricting the software selection ultimately leaves unmet engineering potential, making this practice hurtful to the end-result.
+
+As each individual use case will require the software for a different use case, software packages in general cover a larger set of features in order to target a larger market of multiple use cases, resulting in relatively overpriced software. Apart from the cost of the software package, there are the costs of maintaining yet another software install and having to deal with recurring costs like license fees per year or version. A way to diminish this barrier is by offering subscriptions to hosted solutions, as many software vendors have started doing. Whilst this reduces the upfront cost, there is more to free software than cost alone.
+
+The freedom to modify the code enables integrating the software package in a solution like an automated tool chain. Better still by modifying the underlying code or even working with upstream development engineers can customize and improve each tool of your tool set. Since it is free software no party will be able to take it from you, and you are able to fork the software if you disagree with the direction development is heading in. In this way an engineer is able to achieve far greater independence.
+
+Whilst it seems to be a good idea to teach students to use professional software pckages used in the workplace, this approach presumes that those software packages will be available for students at the job after graduation. If this isn’t the case, these engineers experience unmet potential. By teaching free software, all students are able to exercise their potential, although some students will experience a non-free software package on the job. If the latter is the case, this presumably is because of specific features, which wouldn’t have been taught at university in the first place.
+
+Furthermore students need to be taught to evaluate software offerings in order to select a package based on the task at hand, rather than to have a package selected for them which is often misused or underused. And free software should be taught just like academics are taught, since both value sharing information and checking the work of others.
+
+nav::[]
