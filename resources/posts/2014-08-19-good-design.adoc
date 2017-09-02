@@ -4,11 +4,6 @@ tags: [Digital freedom, privacy, security]
 = Good design
 :author:   Nico Rikken
 :revdate:  2014-08-19
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 In the 1970s industrial designer Dieter Rams famously wrote his link:https://en.wikipedia.org/wiki/Dieter_Rams#Dieter_Rams:_ten_principles_for_good_design[ten principles for good design] which is a powerful way of evaluating the quality of any product. Many methodologies exist on how best to design in order to achieve a certain kind of product, but I have yet to come across any other methodology on evaluating the end-product. In a way that final evaluation is all that matters, even though many companies can get away with tricking customers into buying lesser products. Setting a standard of good products will be a tremendous boost for overall wealth in the world, since this will most surely inspire others to strive for similar goals.
 
@@ -25,5 +20,3 @@ Considering how issues related to privacy and security map on these principles, 
 
 == Conclusion
 These powerful principles might some times seem to be in conflict with each other and often times products are designed for short-term gains despite best intentions. It is however up to involved designers to improve the products and make the hard compromises required, not only to suit target customers but to suit society as a whole. This holds for privacy and security just as it holds for aesthetics and sustainability. Designers have to power to shape our world and with great power comes great responsibility.
-
-nav::[]

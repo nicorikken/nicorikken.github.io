@@ -4,11 +4,6 @@ tags: [other]
 = Glasvezelkaravaan
 :author:   Nico Rikken
 :revdate:  2015-02-14
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 Informatie met de snelheid van het licht, daar komt het aan. +
 Busje, werklui, zand, stoeptegels, kraan. +
@@ -24,5 +19,3 @@ Daar komt het aan, daar komt het aan. +
 Telefoon, antenne, gas, water, elektra, allen erachteraan, +
 Busje, werklui, zand, stoeptegels, kraan, koffie. +
 De reparateurs, helden in hun kloffie.
-
-nav::[]

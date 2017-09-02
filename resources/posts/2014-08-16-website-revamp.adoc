@@ -4,14 +4,7 @@ tags: [Digital freedom, Free software]
 = Website revamp
 :author:   Nico Rikken
 :revdate:  2014-08-16
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 Having run a low-key website for a couple of months now, I came to the conclusion that I had to restructure it in order to take it to the next level. Underlying was a self-built (php) back-end which took care mostly of presentation and not on content management. By using a link:https://wordpress.org/[WordPress] back-end advanced functions for presentation and content management become available. In a couple of hours I was able to build a custom theme, which covers the functionality I need.
 
 Having set the structure for my new website, the next task will be to add preceding content and fine-tune the theme to display correctly on all devices. New content can therefore be expected soon.
-
-nav::[]

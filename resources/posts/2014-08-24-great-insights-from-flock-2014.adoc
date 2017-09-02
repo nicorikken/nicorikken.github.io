@@ -4,11 +4,6 @@ tags: [Digital freedom, Free software, Privacy, Security]
 = Great insights from Flock 2014
 :author:   Nico Rikken
 :revdate:  2014-08-24
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 This month the link:http://flocktofedora.com/[Fedora Flock] conference was held in Prague. Even though I haven’t used Fedora in a while now, the conference was interesting to me because of other topics discussed. I already link:http://nicorikken.eu/blog/novena-laptop-as-an-open-source-booster/[reported] on the link:https://www.youtube.com/watch?v=qzGEBJLlUIc[Novena presentation], but below I’ve listed other presentations.
 
@@ -38,5 +33,3 @@ I found this link:https://www.youtube.com/watch?v=5D_HZo_cCcQ[presentation] be a
 
 == Yubikeys – Nick Bebout
 This link:https://www.youtube.com/watch?v=GakryhT12_k[presentation] covers the Yubikeys by link:http://www.yubico.com/[Yubico], which can be used for link:https://en.wikipedia.org/wiki/Two_factor_authentication[two-factor authentication]. The newer model called the Yubikey Neo also features the possibility of hardware-based PGP. The presentation covered some aspects specifically targeted for Fedora users, but it did a decent covering of the features of Yubikey and even of smart-cards. Including a demo, this presentation offers plenty of pointers to delve into the various aspects of key management and two-factor authentication.
-
-nav::[]

@@ -1,5 +1,4 @@
-{;:base-url "http://nicorikken.eu/perun/"
- ;; :base-url "file:///home/nico/Software/nicorikken/nicorikken.github.io/target/public/"
- :base-url "http://localhost:3000/"
+{;; :base-url "http://localhost:3000/"
+ :base-url "http://site.nicorikken.eu/"
  :site-title "Nico Rikken"
  :description "Homepage of Nico Rikken"}

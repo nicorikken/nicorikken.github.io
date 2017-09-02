@@ -4,11 +4,6 @@ tags: [Information]
 = Educational economics
 :author:   Nico Rikken
 :revdate:  2014-09-08
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 Thinking about the brave new world of free education based on freely available information and educational programs, it became clear to me that there is a specific kind of economics to education. The basic time-tested principle of education is the chronological process of starting a suitable education, passing a cycle of learning and testing, passing the final test, getting the degree and finally enjoying the benefits it gives, and in some cases a  renewal process needs to be followed indefinitely. In practice this scheme is strongly effectuated by the public opinion which generally favors a degree over a loose education, and the fact that most educational programs are very structured and regulated by various authorities. To put it in economic terms, this scheme leads people from an educational mortgage to educational rental.
 
@@ -19,5 +14,3 @@ Considering that we can only learn so much and that our time spent on education 
 This leads us to the second possibility of rethinking the paradigm. What if our culture would strongly value gained knowledge over gained degrees and would have people learning by doing in order to speed up the evaluation-cycle of preferences in work leading to desire for educational topics. This would imply a world of education concerning small incremental educational steps of complete topics which also cover the necessary additional information to understand the main information, rather than putting that information into a different course. It should be clear how certain topic relate to each other, in order to make thoughtful decisions on the next education steps.
 
 This flexible way of educating would require a different student mindset, a different kind of study material and a different kind of degree valuation, but I’d like to think that with the aid of technology this is not only a possibility, but this will also become reality.
-
-nav::[]

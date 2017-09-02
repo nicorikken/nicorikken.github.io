@@ -1,12 +1,8 @@
----
----
 = Skills
 :toc: left
 :navicons:
 :nav-home: <<../index.adoc#,home>>
 :nav-prev: <<experience.adoc#,experience>>
-
-nav::[]
 
 == Technical expertise
 My main technical expertise is on power systems and related IT-solutions.
@@ -54,5 +50,3 @@ In addition I was actively involved in developing the design and content for the
 == Product training
 Related is my experience in setting up an educational program for (product) training, regarding both the instruction material as well constructing the program and teaching.
 This skill has grown both as a secretary at the student climbing association teaching new students climbing techniques as well as at MPARE teaching engineers how to use the product.
-
-nav::[]

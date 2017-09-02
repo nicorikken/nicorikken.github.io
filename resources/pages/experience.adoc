@@ -1,13 +1,9 @@
----
----
 = Experience
 :navicons:
 :nav-home: <<../index.adoc#,home>>
 :nav-prev: <<contact.adoc#,contact>>
 :nav-next: <<skills.adoc#,skills>>
 :toc: left
-
-nav::[]
 
 == Work
 
@@ -64,5 +60,3 @@ It helped me to look beyond technology.
 VWO, Nature & Science specialization with a Computer Science course.
 
 At the end of my education I was part of the Stunt Committee, in which I was part in organizing all student activities related to the graduation period, including: negotiating with school, contact with external companies and planning an event for over 200 people.
-
-nav::[]

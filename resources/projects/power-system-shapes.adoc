@@ -1,11 +1,7 @@
----
----
 = Power system shapes
 :navicons:
 :nav-home: <<../index.adoc#,home>>
 :nav-up: <<index.adoc#,projects>>
-
-nav::[]
 
 During my grduation project I became aware of the lack of open source power system symbols.
 The symbols themselves are pretty well standardized, and are used in many different technical materials.
@@ -52,5 +48,3 @@ For example there might be sheets containing all available shapes, but also ther
 .Implementation
 Currently my best bet on the implementation would be to use some XML manipulation library.
 Recently I've acquired some knowledge in Clojure, which might be a suitable target for this project as well.
-
-nav::[]

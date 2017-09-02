@@ -4,12 +4,6 @@ tags: [free software, Digital Freedom]
 = My C720P upgrade to freedom
 :author:   Nico Rikken
 :revdate:  2015-05-05
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-:nav-next: <<2015-05-05-gajim-and-gpg-agent.adoc#,Gajim and GPG agent>>
-
-nav::[]
 
 A couple of years ago I started using my own laptop at work under the policy of link:https://en.wikipedia.org/wiki/Bring_your_own_device[bring your own device] although to me it wasn’t about the device, it was about bringing a free computing platform I can trust, a GNU/Linux distribution, and many free and powerful applications, all to improve my short-term and long-term effectivenes link:http://nicorikken.eu/blog/why-engineering-students-need-to-be-taught-free-software/[as an engineer]. This however changed my needs regarding battery life, screen brightness and form-factor. And with the recent dying of my Lenovo Thinkpad T60p, I desired an upgrade, to be able to destine my current Lenovo Thinkpad T61 to become my backup.
 
@@ -37,5 +31,3 @@ I strongly encourage anyone to contact link:https://quietlife.nl/[Kevin] for his
 image::../assets/img/2015/05/5-300x225.jpg[align="center", width=300, link="../assets/img/2015/05/5.jpg"]
 
 Now having two operational laptops with two slightly different use-cases, I’m even more encouraged to finish my syncing setup. So far my synchronization is done using link:https://syncthing.net/[Syncthing], link:https://www.mozilla.org/en-US/firefox/sync/[Mozilla Sync], my own link:http://www.freenas.org/[Freenas] build, and a remote link:https://owncloud.org/[OwnCloud] server, but more on that later.
-
-nav::[]

@@ -4,11 +4,6 @@ tags: [Digital freedom, Free software]
 = Ubuntu calling freedom
 :author:   Nico Rikken
 :revdate:  2015-02-14
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 So far the flash sales of the first Ubuntu phone link:http://www.omgubuntu.co.uk/2015/02/bq-ubuntu-phone-goes-sale-next-week-e169-meizu-device-coming-soon[by Bq] has been link:http://www.omgubuntu.co.uk/2015/02/96735[sold out], and certainly not without a reason: the Ubuntu phone holds great promises for both the users and the development community. On the FSFE link:https://mail.fsfeurope.org/mailman/listinfo/discussion[Discussion mailinglist] I already gave a quick and general link:http://mail.fsfeurope.org/pipermail/discussion/2015-February/010456.html[overview] mostly based on a recent Linux Unplugged link:http://www.jupiterbroadcasting.com/77087/ubuntu-calling-lup-79/[podcast], and so in this post I’d like to revisit my comments with a focus on freedom, as this is lacking in link:http://opensource.com/business/15/2/what-ubuntu-phone-could-mean-open-source[other] articles. One word of caution though, I haven’t yet read formal documents or code, so all listed info is second-hand.
 
@@ -27,5 +22,3 @@ One somewhat overlooked part, is the availability of link:https://www.youtube.co
 Of course the big elephant in the room is that the phone ties into the Ubuntu ecosystem and so convergence would be best between the Ubuntu phone and the Ubuntu desktop, and likewise it would bring a boost to the Ubuntu store, Ubuntu link:http://www.ubuntu.com/things[Snappy Core] and presumably to cloud services. So what if Ubuntu would be the next big platform? Well, it would bring a very free firmware which is very friendly to porting devices, it would encourage development in HTML5 and Qt, it would encourage more decentralized applications, it would enable development of the Ubunthu phone itself, and it would put a great alternative next to the Google-ized Android and other systems.
 
 Either way, I nearly bought one but I just missed out by the flash-sale. I’d strongly consider ordering one, because I believe this stack is much more freedom-respecting than Android. More frustrating my perfectly fine phone is still on Android 2.2 with a lack of application support and a whole load of known bugs. I haven’t looked deep enough into Jolla or Tizen to judge them. There are many known improvements available to be adopted, both in hardware, firmware and the available applications. Currently however this seems to be a great phone, with a great software platform, which is another stepping stone in the right direction.
-
-nav::[]

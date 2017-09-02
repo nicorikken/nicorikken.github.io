@@ -1,12 +1,8 @@
----
----
 = Contact
 :navicons:
 :nav-home: <<../index.adoc#,home>>
 :nav-prev: <<about.adoc#,about>>
 :nav-next: <<experience.adoc#,experience>>
-
-nav::[]
 
 .Social Media
 * link:https://loadaverage.org/nicorikken[GNU Social]
@@ -32,5 +28,3 @@ nav::[]
 
 .Encryption
 * link:http://subkeys.pgp.net:11371/pks/lookup?op=vindex&amp;search=0x1A3C51D11C81AB6[DSA 2048 key] `ECE2 5C50 6550 3E34 453F  767B 1A3C 51D1 1C81 AB68`
-
-nav::[]

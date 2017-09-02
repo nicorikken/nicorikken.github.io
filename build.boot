@@ -14,11 +14,6 @@
          '[pandeiro.boot-http :refer [serve]]
          '[util :refer [is-of-type?]])
 
-;; (defn is-of-type?
-;;   ;;via https://gitlab.com/200ok/200ok.gitlab.io/blob/master/build.boot
-;;   [{:keys [permalink]} doc-type]
-;;   (.startsWith permalink (str "/" doc-type)))
-
 (deftask build
   "Build the blog."
   []
@@ -26,26 +21,33 @@
    (global-metadata)
    ;; (markdown)
    (asciidoctor)
-   (print-meta)
-   (slug)
+   ;; (print-meta)
+   ;; (slug)  ;;TODO does not work properly for pages and projects
    (permalink)
    (render :renderer 'views.page/render
            :filterer
-           #(or
-             ;; (is-of-type? "posts" %)
-             ;;              (is-of-type? "pages" %)
-             ;;              (is-of-type? "projects" %)
-                          (is-of-type? % "posts")
-                          (is-of-type? % "pages")
-                          (is-of-type? % "projects")
-                          )
-           )
-   (collection :renderer 'views.index/render :page "index.html")
-   ;; (sitemap)
+           #(or (is-of-type? % "posts")
+                (is-of-type? % "pages")
+                (is-of-type? % "projects")))
+   (collection :renderer 'views.index/render :page "index.html") ;; maybe do by assortment task?
+   (collection :renderer 'views.collection/render-with-date
+               :filterer #(or (is-of-type? % "posts"))
+               :sortby :date-published ;;TODO how to do a reverse sort?
+               :page "posts/index.html")
+   (collection :renderer 'views.collection/render
+               :filterer #(or (is-of-type? % "pages"))
+               :sortby :title
+               :page "pages/index.html")
+   (collection :renderer 'views.collection/render
+               :filterer #(or (is-of-type? % "projects"))
+               :sortby :title
+               :page "projects/index.html")
+   (sitemap)
    (rss :description "Nico Rikken blog")
+   ;; (rss :filename "fsfe.xml" :filterer TODO)
    (atom-feed :filterer :original)
    (target)
-   (show "-f")
+   ;; (show "-f")
    (notify)))
 
 (deftask dev

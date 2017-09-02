@@ -1,19 +1,11 @@
----
----
 = Static site with separate source branch
 :author:   Nico Rikken
 :revdate:  2016-08-02
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-:nav-prev: <<2016-08-01-batch-youtube-dl-task.adoc#,Batch YouTube-dl task>>
 
 This post is dedicated to the use-case where there are 2 different branches in a project.
 Typically one branch is for the source files, and one is for the generated output files for publishing.
 This use-case matches the way in which this website is currently hosted, via link:https://pages.github.com/[GitHub pages].
 Then the `master` branch is eventually published, whereas other branches remain in the repositories only.
-
-nav::[]
 
 [NOTE]
 Typically generated websites have a dedicated distribution directory like `dist` in which the generated files end up.

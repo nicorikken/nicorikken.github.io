@@ -1,11 +1,6 @@
 = Free as in Freedom comeback
 :author:   Nico Rikken
 :revdate:  2016-09-12
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 .Free as in Freedom oggcast
 I listen to podcasts daily, when cycling to and from work, and when doing otherwise uninteresting tasks.
@@ -28,5 +23,3 @@ And so they do. Today I enjoyed the link:http://faif.us/cast/2016/sep/02/0x5C/[L
 Throughout the podcast it is quite fun to hear Karen and Bradley unintentionally fall into the details and exceptions. They do cut it short in order not to confuse or put of newcommers, but a more educated community member might catch his mind drifting towards past news covering such exceptions.
 
 All in all great comeback. I can't wait to listen to the next cast of this series!
-
-nav::[]

@@ -4,12 +4,5 @@ tags: [Other]
 = It's just technology
 :author:   Nico Rikken
 :revdate:  2014-09-14
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 Of course I also observed the live coverage of the recent Apple-event. But despite the various improvements to their product range and the addition of the watch, it simply wasn’t the magic I was hoping for. That evening it struck me that technology is only about the way of doing things, it’s a tool, it just helps. link:https://en.wikipedia.org/wiki/Kranzberg%27s_laws_of_technology[Melving Kranzberg] already knew technology is neither good, nor bad, nor neutral, thereby making it subject to its use. Marketing technology as a life-changer the way Apple does therefore seems to be a bit naive. Sure, insights in your health will help grow awareness, and being given correctional tips will help maintain habits. But bottom line you can only change life by yourself. Without intention, technology will hardly be any good. You might as well achieve the same results without that technology, which might even be better since there wasn’t any technology-dependence. Taking this viewpoint, the world all of a sudden seems to make a lot of buzz about the way we do things. I found the link:https://www.youtube.com/watch?v=MOXQo7nURs0[bookbook commercial] by Ikea interesting in this regard.
-
-nav::[]

@@ -4,11 +4,6 @@ tags: [Digital freedom, Free software, Power systems, Smart grid]
 = IEEE Open Source Software Task Force
 :author:   Nico Rikken
 :revdate:  2014-12-24
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 Sometimes an open initiative just ‘clicks’, because it fills a growing need and does so in the right way. Great non-software examples I have come across in recent history are link:https://www.wikipedia.org/[Wikipedia] link:http://www.openstreetmap.org/[OpenStreetMap] link:http://reprap.org/[RepRap] link:http://www.diybookscanner.org/[DIY Book Scanner] link:http://www.wikihouse.cc/[WikiHouse] link:https://www.opendesk.cc/[OpenDesk] and link:http://nicorikken.eu/blog/why-eoma68-will-advance-both-free-software-and-free-hardware/[EOMA68]. Just yesterday I experienced another such a ‘click’ initiative: the link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/software.htm[IEEE Task Force] on Open Source Software for Power Systems. This initiative has a clear link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/index.htm[mission] in encouraging free software adoption in this rather conservative field:
 
@@ -27,5 +22,3 @@ In any case power system software is becoming an ever more important part of the
 Two listed presentations at the panel sessions of 2009 because it shows the task force cares about software integration. An link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/archive/PESGM2009-000217-slides.pdf[interchangeable data format] was discussed which expands upon existing standards to better allow software programs to tie in with each other. Likewise link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/archive/PESGM2009-000970-slides.pdf[GIS integration] has been discussed, which is an important development in bridging the gap between the real-world and the simulation model, since the scope of a power system is greater than its individual components.
 
 The link:http://ewh.ieee.org/cmte/psace/CAMS_taskforce/software.htm[software list] published by the task force certainly lists some projects I’ll look further into. I certainly hope the efforts of this task force and the listed projects will contribute to a bright power system future.
-
-nav::[]

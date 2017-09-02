@@ -1,11 +1,7 @@
----
----
 = Asciidoctor
 :navicons:
 :nav-home: <<../index.adoc#,home>>
 :nav-up: <<index.adoc#,projects>>
-
-nav::[]
 
 I got started with Asciidoc when we adopted it at work, because of the more advanced featured compared to Markdown.
 Soon after I did my link:https://github.com/hashobject/perun/pull/50[first Clojure project], by prototyping Asciidoctor support in the Perun static site generator.
@@ -48,5 +44,3 @@ As mentioned in a dedicated link:https://github.com/asciidoctor/asciidoctor/issu
 Rather than directly using the syntax of the link:http://criticmarkup.com/[criticmarkup project] it makes more sense to me to use an inline macro syntax.
 It could have similar properties as the quote macro has.
 Then in addition the criticmarkup could be supported, by parsing the Asciidoc source in the extension.
-
-nav::[]

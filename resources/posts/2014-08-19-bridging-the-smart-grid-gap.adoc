@@ -4,11 +4,6 @@ tags: [Power Systems, Smart grid]
 = Bridging the smart grid gap
 :author:   Nico Rikken
 :revdate:  2014-08-19
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up:   <<index.adoc#,posts>>
-
-nav::[]
 
 In the industry and academics around power systems there is a lot of buzz around the link:https://en.wikipedia.org/wiki/Smart_grid[smart grid]. As the matter of fact, the smart grid has become the norm on which to base predictions and proposals. And despite all the marketing buzz, it is truly a great cause for engineers to pay attention to. The smart grid paradigm releases extensive engineering efforts and the supportive creativity and financial funds. The underlying motivation is however rarely questioned. Why even a smart grid? Does it have any significance?
 
@@ -21,5 +16,3 @@ Even though these worlds are closing in on each other, they talk different langu
 The real threat to the smart grid adoption is when the mechanics are overrun by the distributed generation and when the management and academics come up with impractical solutions for non-existing problems. It is the problem of not talking and not having the smart grid discussion.
 
 So at last there seems to be a reason not only for the smart grid, but more importantly for all its buzz.
-
-nav::[]
