@@ -1,4 +1,4 @@
-{;; :base-url "http://localhost:3000/"
+{;:base-url "http://localhost:3000/"
  :base-url "http://site.nicorikken.eu/"
  :site-title "Nico Rikken"
  :description "Homepage of Nico Rikken"}

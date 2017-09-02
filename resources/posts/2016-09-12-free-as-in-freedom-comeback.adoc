@@ -1,3 +1,6 @@
+---
+tags: [Free software]
+---
 = Free as in Freedom comeback
 :author:   Nico Rikken
 :revdate:  2016-09-12

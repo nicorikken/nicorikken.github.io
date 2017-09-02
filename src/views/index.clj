@@ -28,7 +28,7 @@
                [:p "Welcome on the new version of my home-page. I'm reworking it to be based on the Asciidoctor task in the Perun static site generator, of of the projects I contribute to. More on this is described in my dedicated post."]
                [:div {:id "toc-nav"}
                 [:div {:id "toc-nav-item"}
-                 [:a {:href "/feed.xml" :title "rss"}
+                 [:a {:href "/feed.rss" :title "rss"}
                   [:i {:class "fa fa-rss" :aria-hidden "true"}]]]]]]
 
              [:div {:class "sect1"}

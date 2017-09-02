@@ -8,21 +8,16 @@
 
 (require '[clojure.string :as str]
          '[io.perun :refer :all]
-         ;'[io.perun.example.index :as index-view]
-         ;'[io.perun.example.post :as post-view]
-         ;; '[views.index :as index-view]
          '[pandeiro.boot-http :refer [serve]]
-         '[util :refer [is-of-type?]])
+         '[util :refer [is-of-type? has-tags?]])
 
 (deftask build
   "Build the blog."
   []
   (comp
    (global-metadata)
-   ;; (markdown)
    (asciidoctor)
    ;; (print-meta)
-   ;; (slug)  ;;TODO does not work properly for pages and projects
    (permalink)
    (render :renderer 'views.page/render
            :filterer
@@ -31,20 +26,23 @@
                 (is-of-type? % "projects")))
    (collection :renderer 'views.index/render :page "index.html") ;; maybe do by assortment task?
    (collection :renderer 'views.collection/render-with-date
-               :filterer #(or (is-of-type? % "posts"))
-               :sortby :date-published ;;TODO how to do a reverse sort?
+               :filterer #(is-of-type? % "posts")
+               :sortby :date-published
                :page "posts/index.html")
    (collection :renderer 'views.collection/render
-               :filterer #(or (is-of-type? % "pages"))
+               :filterer #(is-of-type? % "pages")
                :sortby :title
                :page "pages/index.html")
    (collection :renderer 'views.collection/render
-               :filterer #(or (is-of-type? % "projects"))
+               :filterer #(is-of-type? % "projects")
                :sortby :title
                :page "projects/index.html")
    (sitemap)
-   (rss :description "Nico Rikken blog")
-   ;; (rss :filename "fsfe.xml" :filterer TODO)
+   (rss :description "Nico Rikken blog"
+        :filterer #(is-of-type? % "posts"))
+   (rss :filename "fsfe.rss"
+        :filterer (partial has-tags? #{"Free software"
+                                       "free software"}))
    (atom-feed :filterer :original)
    (target)
    ;; (show "-f")
