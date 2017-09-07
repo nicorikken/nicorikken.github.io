@@ -1,7 +1,4 @@
 = Asciidoctor
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up: <<index.adoc#,projects>>
 
 I got started with Asciidoc when we adopted it at work, because of the more advanced featured compared to Markdown.
 Soon after I did my link:https://github.com/hashobject/perun/pull/50[first Clojure project], by prototyping Asciidoctor support in the Perun static site generator.

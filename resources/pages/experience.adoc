@@ -1,9 +1,4 @@
 = Experience
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-prev: <<contact.adoc#,contact>>
-:nav-next: <<skills.adoc#,skills>>
-:toc: left
 
 == Work
 

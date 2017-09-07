@@ -1,7 +1,4 @@
 = Atom GLM language support
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up: <<index.adoc#,projects>>
 Nico Rikken
 2016-07-22
 

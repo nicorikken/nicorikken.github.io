@@ -1,7 +1,4 @@
 = OpenDSS syntax highlighting
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up: <<index.adoc#,projects>>
 
 In my graduation project I made extensive use of the distribution system simulation capabilities of link:https://sourceforge.net/projects/electricdss/[OpenDSS].
 At the time I was using link:https://wiki.gnome.org/Apps/Gedit[Gedit] as my main text editor, and so I created an link:https://github.com/nicorikken/opendss-highlight[OpenDSS syntax highlighter for Gedit].

@@ -1,8 +1,4 @@
 = Skills
-:toc: left
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-prev: <<experience.adoc#,experience>>
 
 == Technical expertise
 My main technical expertise is on power systems and related IT-solutions.

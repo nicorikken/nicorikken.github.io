@@ -12,6 +12,7 @@
           [:meta {:http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1"}]
           [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0, user-scalable=no"}]
           (include-css (str (:base-url global-meta) "assets/styles/rams.css"))
+          (include-css (str (:base-url global-meta) "assets/styles/coderay.css"))
           (include-css "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css")
           e/toc-nav-css]
          [:body {:class "article"}

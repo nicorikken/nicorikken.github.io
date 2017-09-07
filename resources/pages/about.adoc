@@ -1,7 +1,4 @@
 = About
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-next: <<contact.adoc#,contact>>
 
 I’m an electrical engineer about to graduate, but I have a couple of years of part-time working experience already.
 My education is mainly on power systems, but my interest is far wider than the grid and its components.

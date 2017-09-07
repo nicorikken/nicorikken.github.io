@@ -1,7 +1,4 @@
 = Power system shapes
-:navicons:
-:nav-home: <<../index.adoc#,home>>
-:nav-up: <<index.adoc#,projects>>
 
 During my grduation project I became aware of the lack of open source power system symbols.
 The symbols themselves are pretty well standardized, and are used in many different technical materials.

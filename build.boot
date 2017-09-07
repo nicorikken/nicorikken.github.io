@@ -16,9 +16,16 @@
   []
   (comp
    (global-metadata)
-   (asciidoctor)
    ;; (print-meta)
-   (permalink)
+   (asciidoctor :diagram true)
+   (show "-f")
+   #_(print-meta
+    :extensions ["adoc" "html" "svg" "png"]
+    :map-fn #(select-keys % [:parent-path :title :permalink :full-path :canonical-url :slug :filename])
+    )
+   ;; (print-meta)
+   ;; (permalink) ;;TODO disabled because it does not include image URLs, for now
+   ;; (print-meta)
    (render :renderer 'views.page/render
            :filterer
            #(or (is-of-type? % "posts")
