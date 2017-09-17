@@ -38,7 +38,7 @@
                 [:ul.items.columns.small-12
                  (for [page pages]
                    [:li
-                    [:a {:href (str (:canonical-url page) "index.html")} (:title page)]])]]]]
+                    [:a {:href (:canonical-url page)} (:title page)]])]]]]
 
              [:div {:class "sect1"}
               [:a {:href "posts/index.html"} [:h2 "Posts"]]
@@ -47,7 +47,7 @@
                 [:ul.items.columns.small-12
                  (for [post posts]
                    [:li
-                    [:a {:href (str (:canonical-url post) "index.html")} (:title post)]
+                    [:a {:href (:canonical-url post)} (:title post)]
                     (when (:date-published post)
                       (str " - "
                            (tf/unparse (tf/formatters :date)
@@ -62,5 +62,5 @@
                 [:ul.items.columns.small-12
                  (for [project projects]
                    [:li
-                    [:a {:href (str (:canonical-url project) "index.html")}(:title project)]])]]]]
+                    [:a {:href (:canonical-url project)}(:title project)]])]]]]
              ]])))

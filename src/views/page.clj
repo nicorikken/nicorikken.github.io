@@ -17,7 +17,7 @@
           e/toc-nav-css]
          [:body {:class "article"}
           [:div {:id "header"}
-           [:h1 (:title post)]
+           [:a {:href (:base-url global-meta)}[:h1 (:title post)]]
            [:div {:class "details"}
             (when-let [author (:author post)]
               [:span {:id "author" :class "author"} author])

@@ -11,11 +11,10 @@
          '[pandeiro.boot-http :refer [serve]]
          '[util :refer [is-of-type? has-tags?]])
 
-(deftask build
+(deftask build*
   "Build the blog."
   []
   (comp
-   (global-metadata)
    ;; (print-meta)
    (asciidoctor :diagram true)
    (show "-f")
@@ -55,8 +54,14 @@
    ;; (show "-f")
    (notify)))
 
+(deftask build
+  []
+  (comp (global-metadata)
+        (build*)))
+
 (deftask dev
   []
   (comp (watch)
-        (build)
+        (global-metadata :filename "perun.local.edn")
+        (build*)
         (serve :resource-root "public")))

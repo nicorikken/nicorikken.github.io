@@ -33,7 +33,7 @@
               [:ul.items.columns.small-12
                (for [entry entries]
                  [:li
-                  [:a {:href (str (:canonical-url entry) "index.html")} (:title entry)]
+                  [:a {:href (:canonical-url entry)} (:title entry)]
                   (when (and print-date?
                              (:date-published entry))
                     (str " - "
